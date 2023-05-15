@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT">
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+
+    <title>蔬菜喝 | SHU TSAI HOT</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Noto Sans TC;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background: transparent;
+        }
+        header .menu{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            background: transparent;
+            z-index: 3;
+        }
+        .menu.fixed {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: white;
+            box-shadow: rgb(222, 220, 220) 2px 2px 3px;
+            z-index: 3;            
+        }
+        header .menu-list{
+            display: flex;
+            list-style: none;
+        }
+        .menu li{
+            margin: 25px;
+            text-align: center;
+        }
+        .menu li a{
+            font-size: 20px;
+            color: #4C4A28;
+            text-decoration: none;
+        }
+        .menu li span{
+            font-family: ChenYuluoyan;
+            font-size: 20px;
+            color: #156E5C;
+        }
+        .banner{
+            width: 100%;
+        }
+        .banner .owl-theme .item {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+         .owl-theme .item img{
+            width: 100%;
+            max-width: 1440px;
+            border-radius: 25px;
+        }        
+        .owl-theme .item .item-slogan{
+            top: 55%;
+            position: absolute;
+            z-index: 2;  
+        }
+        .owl-theme .item .item-slogan p{
+            display: inline;
+            padding: 12px;
+            font-family: ChenYuluoyan;
+            font-size: 48px;
+            letter-spacing: 5px;
+            background: white;
+            border-radius: 10px;
+        }
+        .owl-carousel .item .item-slogan .o{
+            width: 25px;
+            position: absolute;
+            top: 5px;
+            left: 263px;
+            z-index: 2;
+        }
+        .about{
+            width: 100%;
+            display: flex;    
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .about-txt{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 25px;
+            background: #F2EED1;
+            border-radius: 5px;
+
+        }
+        .about-txt h1{
+            width: 40px;
+            position: absolute;
+            top: 50%-80px; 
+            right: -20px;
+            font-size: 40px;
+        }
+        .about-txt .about-content{
+            margin: 70px 100px;
+            line-height: 60px;
+            font-size: 24px;
+        }
+        .about-txt .more{
+            position: absolute;
+            bottom: 50px;
+            right: 70px;
+            width: 100px;
+            font-family: ChenYuluoyan;
+            font-size: 32px;
+            color: white;
+            background: #156E5C;
+            border: 0;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .about .about-pic{
+            width: 100%;
+            height: 100%;
+            max-width: 500px;
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="">品牌故事<br><span>Story</span></a></li>
+                <li><a href="">產品介紹<br><span>Products</span></a></li>
+                <li><a href="">料理小教室<br><span>Classroom</span></a></li>
+                <li><a href="">最新消息<br><span>News</span></a></li>
+                <li><a href="">購物須知<br><span>Instructions</span></a></li>
+                <li><a href="">會員登入 / 註冊<br><span>Log in / Register</span></a></li>
+            </ul>
+        </nav>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementsByTagName("nav")[0];
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("fixed")
+            } else {
+                navbar.classList.remove("fixed");
+            }
+            }
+        </script>
+    </header>
+    <div class="banner">
+        
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="item-slogan"><p>「健康，從 蔬菜喝 開始！」</p></div>
+                <img src="pictures/banner-pic1.png">
+            </div>
+            <div class="item">
+                <div class="item-slogan">
+                    <p>「SHU TSAI H&nbsp;&nbsp;T，打造你的蔬菜狂熱！」</p>
+                    <img class=o src="pictures/logo.png" alt="o">
+                </div>
+                
+                <img src="pictures/banner-pic2.png">
+            </div>
+        </div>
+    </div>
+    <!-- banner script start-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:0,
+                nav:false,
+                items:1,
+                center:true,
+                autoplay:true,
+                dots:false,
+                responsive:{
+                    0:{items:1},
+                    768:{items:1},
+                    1200:{items:1}
+                }
+            });
+        });
+    </script>
+    <!-- banner script end-->
+    <div class="about">
+        <div class="about-txt">
+            <h1>關於我們</h1>
+            <p class="about-content">
+                「蔬菜喝」提供有機、無農藥、非基因改造的蔬菜盒和蔬果汁，我們與當地小農和有機農場合作，生產最新鮮、最健康的產品，每期根據季節和供應情況調整產品組合。我們的蔬果汁不含任何添加劑、防腐劑或人工色素，是您每天所需營養的最佳來源。讓「蔬菜喝」幫助您享受更健康、更美味的生活！
+            </p>
+            <button class="more">more ▸</button>
+        </div>
+        <img class="about-pic" src="pictures/about-pic.png" alt="">
+        
+    </div>
+    <div class="introduce">
+        <h1>產品介紹</h1>
+        <div class="intro-slogan">
+            <h2>Fresh 蔬菜盒</h2>
+            <h2>Yummy 蔬果汁</h2>
+            <h2>搭配多元，隨心所欲</h2>
+        </div>
+        <div class="intro-content">
+            <p>蔬菜盒皆為當天現採，經過揀選後，立即將品質優良的蔬果送入低溫保存，以維持健康營養不流失。</p>
+            <p>產品皆非基因改造及無農藥添加，較一般農產品擁有更高營養價值，保留天然的好滋味，天然的好滋味，每期進行農藥檢驗，保證讓您吃得安心</p>
+            <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
+        </div>
+    </div>
+    <div class="recipe">
+        <h1>今期菜單</h1>
+        5月8日	葉菜	A菜、高麗菜、青江菜、芥菜
+	根莖	馬鈴薯、紅蘿蔔
+	瓜果	南瓜
+	蔬果汁	綜合蔬果汁
+5月15日	葉菜	大白菜、紅菜、花椰菜、高麗菜
+	根莖	白蘿蔔、紅蘿蔔
+	瓜果	苦瓜
+	蔬果汁	綜合蔬果汁
+5月22日	葉菜	青花菜、小白菜、油菜、莧菜
+	根莖	番薯、紅蘿蔔
+	瓜果	絲瓜
+	蔬果汁	綜合蔬果汁
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
