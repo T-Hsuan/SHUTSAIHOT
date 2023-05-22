@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT">
+    <link rel="stylesheet" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT\css.json">
+    <link rel="icon" href="pictures/titleicon.png">
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <title>蔬菜喝 | SHU TSAI HOT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        h1{
+            font-size: 36px;
+            color: #4C4A28;
+            text-align: center;
+        }
+        h2{
+            font-size: 32px;
+            color: #4C4A28;
+            text-align: center;
+        }
+        h3{
+            font-size: 24px;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            z-index: 3;
+        }
+        header .menu{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background: white;
+            z-index: 3;
+        }
+        .menu .menu-logo{
+            width: 200px;
+            position: relative;
+            left: 2.5%;
+        }
+        .menu .menu-logo img{
+            width: 80%;
+        }        
+        .menu .menu-logo:hover{
+            opacity: .9;
+        }
+        header .menu-list{
+            display: flex;
+            list-style: none;
+        }
+        .menu-list li{
+            margin: 25px;
+            text-align: center;
+        }
+        .menu-list li a:hover, .english-menu:hover{
+            opacity: .8;
+        }
+        .menu-list li a{
+            font-size: 20px;
+            color: #4C4A28;
+            text-decoration: none;
+        }
+        .menu-list li .english-menu{
+            font-family: 'Caveat', cursive;
+            font-size: 20px;
+            color: #156E5C;
+        }
+        .menu-list .search-box{
+            position: relative;
+            left: -4%;
+            top: 0;
+            bottom: 0;
+        }
+        .search-box #search-icon{
+            position: relative;
+            right: 11%;
+            top: 30%;
+            bottom: 0;
+            margin: auto 0px auto 150px;
+            max-width: 40px;
+            max-height: 40px;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .search-box #search-bar{
+            width: 130px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            top: 25%;
+            font-size: 20px;
+            color: gray;
+        }
+        .about{
+            background: #FFEEE5;
+        }
+        .about-zone{
+            max-width: 1200px;
+            margin: auto;
+            padding: 5%; 
+            position: relative;
+            box-sizing: border-box;
+        }
+        .about-zone .about-deco{
+            position: absolute;
+        }        
+        .about-zone .h1-ch{
+            font-family: ChenYuluoyan;
+            font-size: 48px;
+            color: #156E5C;
+            position: absolute;
+        }
+        .about-zone .h1-en{
+            font-family: ChenYuluoyan;
+            font-size: 48px;
+            color: #156E5C;
+            position: absolute;
+        }
+        .about-zone .about-logo{
+            position: absolute;
+        }
+        .about-zone .about-card{
+            max-width: 1200px;
+            box-sizing: border-box;
+            margin: 0 15px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .about-card .about-card-top{
+            width: 600px;
+            position: relative;
+        }
+        .about-card-top p{
+            width: 500px;
+            line-height: 60px;
+            padding: 10px;
+            position: absolute;
+            left: 45px;
+            top: 30px;
+            font-size: 18px;
+        }
+        .about-card-top .card-bg-top{
+            width: 600px;
+        }
+        .about-card .about-card-center{
+            width: 580px;
+            position: relative;
+        }
+        .about-card-center p{
+            width: 500px;
+            line-height: 60px;
+            padding: 10px;
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            font-size: 18px;
+        }
+        .about-card-center .card-bg-center{
+            width: 575px;
+        }
+        .about-card .about-card-bottom{
+            width: 575px;
+            position: relative;
+        }
+        .about-card-bottom p{
+            width: 500px;
+            line-height: 60px;
+            padding: 10px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            font-size: 18px;
+        }
+        .about-card-bottom .card-bg-bottom{
+            width: 580px;
+        }
+
+        @media screen and (min-width: 768px){
+            .about-zone .about-card {
+                align-items: center;
+            }
+        }
+        @media screen and (min-width: 1024px){
+            .about-zone .about-card {
+                align-items: center;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .about-zone .about-deco{
+                right: 5%;
+                bottom: 19%;
+            }
+            .about-zone .h1-ch{
+                left: 0;
+                right: 75%;
+                top: 47%;
+                bottom: 0;
+                margin: auto;
+            }
+            .about-zone .h1-en{
+                left: 45%;
+                right: 0;
+                top: 60%;
+                bottom: 0;
+                margin: auto;
+            }
+            .about-zone .about-logo{
+                left: 0;
+                right: 25%;
+                top: 0;
+                bottom: 5%;
+                margin: auto;
+            }
+            .about-card .about-card-top{
+                right: 30%;
+            }
+            .about-card-center{
+                left: 30%;
+                bottom: 165px;
+            }
+            .about-card-bottom{
+                right: 30%;
+                bottom: 180px;
+            }
+        }
+        footer{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template: repeat(2,1fr)/repeat(10,1fr);
+            place-items: center;
+            gap: 10px;
+            color: #4C4A28;
+            background: #f2EED1;
+        }
+        footer .footer-deco {
+            background: #F2EED1;
+            width: 230px;
+            height: 180px;
+            grid-area: 1/2/3/3;
+            position: relative;
+            top: -90px;
+            border-radius: 50%;
+            z-index: 0;  
+        }
+        footer .footer-logo{
+            max-width: 150px;
+            grid-area: 1/2/3/3;
+            position: relative;
+            bottom: 20px;
+            z-index: 1;
+        }
+        .footer-logo a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-logo a:hover{
+            opacity: .9;
+        }
+        footer .footer-content {
+            grid-area: 1/3/3/7;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-content .footer-link {
+            display: flex;
+            list-style: none;
+        }
+        .footer-link li{
+            margin: 20px 10px 15px;
+        }
+        .footer-link li:nth-child(2){
+            margin-top: 22px;
+        }
+        .footer-link li a {
+            font-size: 20px;
+            font-weight: 500;
+            color: #156E5C;
+            text-decoration: none;
+        }
+        .footer-link li:nth-child(2) a{
+            font-family: 'Caveat', cursive;
+            font-weight: 700;
+        }
+        .footer-link li a:hover{
+            color: #F99964;
+            opacity: .8;
+        }
+        .footer-content .footer-companyInfo{
+            margin: 0 10px;
+            line-height: 25px;
+            font-size: 16px;
+            color: #4C4A28;
+        }
+        .footer-companyInfo .tel {
+            font-family: 'Caveat', cursive;
+            color: #4C4A28;
+            
+            text-decoration: none;
+        }
+        .footer-content .footer-priv_copy{
+            margin: 5px 10px 0;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .footer-priv_copy .privacy {
+            font-size: 12px;
+            font-weight: 100;
+            color: black;
+            text-decoration: none;
+        }
+        footer .copyright {
+            font-size: 10px;
+            font-weight: 100;
+            color: black;
+        }
+        footer .footer-followus{
+            grid-area: 1/7/3/9;
+            justify-self: start;
+            text-align: center;        
+        }
+        .footer-followus h2{
+            font-size: 32px;
+            font-family: 'Caveat', cursive;
+            letter-spacing: 7px;
+        }
+        .footer-followus a{
+            font-size: 65px;
+            color: #4C4A28;
+        }
+        .footer-followus a:hover{
+            color: #F99964;
+        }
+        footer .pagetop{
+            grid-area: 1/9/3/10;
+            justify-self: start;
+            cursor: pointer;
+        }
+        footer .pagetop:hover{
+            scale: 1.1;
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <ul class="menu-list">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href=""><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href=""><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href=""><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href=""><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
+                <li><a href=""><p>會員登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <div class="search-box">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search">
+                    <input type="text" id="search-bar" value="搜尋產品" style="display: none;">
+                </div>
+                <script>
+                        var searchIcon = document.getElementById('search-icon');
+                        var searchBar = document.getElementById('search-bar');
+                        searchIcon.addEventListener('click', function() {
+                            if (searchBar.style.display === 'none') {
+                            searchBar.style.display = 'block';
+                            } 
+                            else {
+                                searchBar.style.display = 'none';
+                            }
+                        })
+                  </script>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="about">
+            
+            <div class="about-zone">
+                <img class="about-deco" src="pictures/about-deco_love.png"></img>
+                <h1 class="h1-ch">關於蔬菜喝</h1>
+                <h1 class="h1-en">關於SHU TSAI HOT</h1>                
+                <img class="about-logo" src="pictures/about-logo.png" alt="">
+                <div class="about-card">
+                    <div class="about-card-top">
+                        <p>歡迎來到「蔬菜喝」！我們是一家提供有機、無農藥、非基因改造的蔬菜箱和蔬果汁的店家。我們的蔬菜和水果皆是與當地小農和有機農場合作生產，不使用任何農藥、化學肥料或基因改造技術，確保您和您的家人食用到最新鮮、最健康的產品。我們每週會根據季節和農產品供應情況來調整我們的產品組合，確保您總能夠享受到最好的品質。</p>
+                        <img class="card-bg-top" src="pictures/about-deco_chat1.png" alt="">
+                    </div>
+                    <div class="about-card-center">
+                        <p>「蔬菜喝」堅信飲食是健康生活的關鍵，我們致力於提供高品質、健康的蔬菜和水果，讓您的生活更健康和有活力。我們的產品非常適合注重健康和飲食品質以及想要改變自己的飲食習慣的朋友。歡迎光臨「蔬菜喝」，讓我們幫助您享受更健康、更美味的生活！</p>
+                            <img class="card-bg-center" src="pictures/about-deco_chat2.png" alt="">
+                    </div>
+                    <div class="about-card-bottom">
+                        <p>我們的蔬果汁是以HPP（High Pressure Processing）加工技術，又稱冷高壓、超高壓滅菌技術，原理是以超高壓（1000～10000大氣壓殺菌）、低溫的方式萃取，保留蔬果的營養成分不被高溫破壞，同時又能滅菌，達到食安衛生標準。不含任何添加劑、防腐劑或人工色素，是您每天所需營養的最佳來源。</p>
+                        <img class="card-bg-bottom" src="pictures/about-deco_chat3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <h1>我們的特色</h1>
+            <div class="feature-zone">
+                <div class="feature-card-top">
+                    <h2>新鮮現採，美味遞送</h2>
+                    <p>我們的蔬菜盒皆為當天現採，隔天立即低溫配送，健康營養不流失。蔬果汁採用以超高壓、低溫的方式萃取，保留蔬果的營養成分不被高溫破壞，同時又能滅菌，達到食安衛生標準。</p>
+                </div>
+                <div class="feature-card-center">
+                    <h2>無毒無農藥添加非基因改造</h2>
+                    <p>產品皆非基因改造及無農藥添加，較一般農產品擁有更高營養價值，保留天然的好滋味，天然的好滋味，每期進行農藥檢驗，保證讓您吃得安心。</p>
+                </div>
+                <div class="feature-card-bottom">
+                    <h2>搭配多元，隨心所欲</h2>
+                    <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
+                </div>
+            </div>
+        </div>
+        <div class="report">
+            <h1>檢驗報告</h1>
+            <img src="pictures/report.png" alt="">
+            <img src="pictures/report.png" alt="">
+            <img src="pictures/report.png" alt="">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-deco"></div>
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="pictures/logo.png" alt="logo" width="100px">
+                <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
+            </a>
+            
+        </div>
+        <div class="footer-content">
+            <ul class="footer-link">
+                <li><a href="">每期菜單</a></li>
+                <li><a href="">Q & A</a></li>
+                <li><a href="">會員專區</a></li>
+                <li><a href="">聯絡客服</a></li>
+            </ul>
+            <div class="footer-companyInfo">
+                <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
+                <p>服務時間:周一至周五 09:00-18:00</p>
+                <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+            </div>
+            <div class="footer-priv_copy">
+                <a class="privacy" href="">服務條款與隱私權政策</a>
+                <p class="copyright"> &copy; 2023 SHU TSAI HOT</p>
+            </div>
+        </div>
+        <div class="footer-followus">
+          <h2>Follow us</h2>
+          <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+        </div>
+            <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
+            >
+        <!-- top script -->
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+        <!-- top script -->
+  </footer>
+</body>
+</html>
