@@ -10,6 +10,7 @@
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="grid.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
@@ -63,7 +64,7 @@
             list-style: none;
         }
         .menu-list li{
-            margin: 25px;
+            margin: 20px;
             text-align: center;
         }
         .menu-list li a:hover, .english-menu:hover{
@@ -112,7 +113,7 @@
         .about-zone{
             max-width: 1200px;
             margin: auto;
-            padding: 5%; 
+            padding: 5% 5% 0; 
             position: relative;
             box-sizing: border-box;
         }
@@ -204,19 +205,19 @@
         @media screen and (min-width: 1200px){
             .about-zone .about-deco{
                 right: 5%;
-                bottom: 19%;
+                bottom: 18%;
             }
             .about-zone .h1-ch{
                 left: 0;
                 right: 75%;
-                top: 47%;
+                top: 49%;
                 bottom: 0;
                 margin: auto;
             }
             .about-zone .h1-en{
                 left: 45%;
                 right: 0;
-                top: 60%;
+                top: 68%;
                 bottom: 0;
                 margin: auto;
             }
@@ -224,7 +225,7 @@
                 left: 0;
                 right: 25%;
                 top: 0;
-                bottom: 5%;
+                bottom: 0;
                 margin: auto;
             }
             .about-card .about-card-top{
@@ -232,12 +233,135 @@
             }
             .about-card-center{
                 left: 30%;
-                bottom: 165px;
+                bottom: 160px;
             }
             .about-card-bottom{
                 right: 30%;
                 bottom: 180px;
             }
+        }
+        .feature {
+            --feat-wid:15px;
+            width: 100%;
+            padding: 150px 0 230px;
+            position: relative;
+            background: #FFEEE5;
+        }
+        .feature .feature-zone{
+            max-width: 1200px;
+            margin: auto;
+            padding-bottom: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feat-deco .feat-deco_h1{
+            position: absolute;
+            left: 85px;
+            right: 0;
+            top: 100px;
+            margin: auto;
+        }
+        .feat-deco .feat-deco_t{
+            max-width: 678px;
+            position: absolute;
+            left: 1%;
+            top: 30%;
+            z-index: 0;
+        }
+        .feat-deco .feat-deco_c{
+            max-width: 681px;
+            position: absolute;
+            right: 1%;
+            bottom: 15%;
+        }
+        .feat-deco .feat-deco_b{
+            max-width: 660px;
+            position: absolute;
+            left: 20%;
+            bottom: 5%;
+        }
+        .feature h1{
+            padding-bottom: 10px;
+        }
+        .feature .feature-zone .row-cols-1 .col .feat-content{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .feature .feature-zone .row-cols-1 .col:nth-child(2) .feat-content{
+            flex-direction: row-reverse;
+        }
+        .feature .feat-content img{
+            max-width: 550px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .feature .feat-content .inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .feature .feat-content .inner h2{
+            color: #156E5C;
+        }
+        .feature .feat-content .inner p{
+            max-width: 400px;
+            line-height: 45px;
+            font-size: 20px;
+        }
+        .report{
+            width: 100%;
+            /* padding-top: 100px; */
+            position: relative;
+            padding: 100px 0;
+            background: #156E5C;
+            z-index: 1;
+        }
+        .report .report-bg-top{
+            width: 100%;
+            position: absolute;
+            top: -85px;
+            left: 0;
+            z-index: -1;
+        }
+        .report h1{
+            color: white;
+        }
+        .report .report-pic{
+            max-width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            padding: 50px;
+        }
+        .report .report-pic img{
+            max-width: 300px;
+            margin: 10px;
+        }
+        .report .more{
+            width: 100px;
+            line-height: 45px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            font-family: ChenYuluoyan;
+            font-size: 32px;
+            color: #4C4A28;
+            background: #FFEEE5;
+            border: 0;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .report .more span{
+            font-size: 24px;
+        }
+        .report .more:hover{
+            background: #F2EED1;
         }
         footer{
             width: 100%;
@@ -368,7 +492,7 @@
             </a>
             <ul class="menu-list">
                 <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
-                <li><a href=""><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
                 <li><a href=""><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
                 <li><a href=""><p>最新消息</p><p class="english-menu">News</p></a></li>
                 <li><a href=""><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
@@ -393,8 +517,7 @@
         </nav>
     </header>
     <main>
-        <div class="about">
-            
+        <div class="about">           
             <div class="about-zone">
                 <img class="about-deco" src="pictures/about-deco_love.png"></img>
                 <h1 class="h1-ch">關於蔬菜喝</h1>
@@ -418,26 +541,53 @@
         </div>
         <div class="feature">
             <h1>我們的特色</h1>
+            <div class="feat-deco">
+                <img class="feat-deco_h1" src="pictures/heading-em2.png" alt="">
+                <img class="feat-deco_t" src="pictures/deco-light1.png" alt="">
+                <img class="feat-deco_c" src="pictures/deco-light2.png" alt="">
+                <img class="feat-deco_b" src="pictures/deco-light3.png" alt="">
+            </div>
             <div class="feature-zone">
-                <div class="feature-card-top">
-                    <h2>新鮮現採，美味遞送</h2>
-                    <p>我們的蔬菜盒皆為當天現採，隔天立即低溫配送，健康營養不流失。蔬果汁採用以超高壓、低溫的方式萃取，保留蔬果的營養成分不被高溫破壞，同時又能滅菌，達到食安衛生標準。</p>
-                </div>
-                <div class="feature-card-center">
-                    <h2>無毒無農藥添加非基因改造</h2>
-                    <p>產品皆非基因改造及無農藥添加，較一般農產品擁有更高營養價值，保留天然的好滋味，天然的好滋味，每期進行農藥檢驗，保證讓您吃得安心。</p>
-                </div>
-                <div class="feature-card-bottom">
-                    <h2>搭配多元，隨心所欲</h2>
-                    <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
-                </div>
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <div class="feat-content">
+                            <img src="pictures/feat-fresh.png" alt="">
+                            <div class="inner">
+                                <h2>新鮮現採，美味遞送</h2>
+                                <p>我們的蔬菜盒皆為當天現採，隔天立即低溫配送，健康營養不流失。蔬果汁採用以超高壓、低溫的方式萃取，保留蔬果的營養成分不被高溫破壞，同時又能滅菌，達到食安衛生標準。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="feat-content">
+                            <img src="pictures/feat-innocuity.png" alt="">
+                            <div class="inner">
+                                <h2>無毒無農藥添加非基因改造</h2>
+                                <p>產品皆非基因改造及無農藥添加，較一般農產品擁有更高營養價值，保留天然的好滋味，天然的好滋味，每期進行農藥檢驗，保證讓您吃得安心。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="feat-content">
+                            <img src="pictures/feat-variety.png" alt=""> 
+                            <div class="inner">
+                                <h2>搭配多元，隨心所欲</h2>
+                                <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
+                            </div>                   
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
         <div class="report">
+            <img class="report-bg-top" src="pictures/recipe-bg-top.png" alt="">
             <h1>檢驗報告</h1>
-            <img src="pictures/report.png" alt="">
-            <img src="pictures/report.png" alt="">
-            <img src="pictures/report.png" alt="">
+            <div class="report-pic">
+                <img src="pictures/report.png" alt="">
+                <img src="pictures/report.png" alt="">
+                <img src="pictures/report.png" alt="">
+            </div>
+            <button class="more">more <span>▸</span></button>
         </div>
     </main>
     <footer>
