@@ -22,7 +22,7 @@
             background: #FFEEE5;
         }
         .today-eats .today-eats-zone{
-            max-width: 1920px;
+            max-width: 1200px;
             margin: auto;
             padding-bottom: 50px;
             position: relative;
@@ -55,13 +55,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 30px 0;
-        }
-        .today-eats-card .today-eats-inner{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 5px;
+            margin: 15px 0 40px 0;
         }
         .today-eats-inner .heading{
             font-size: 24px;
@@ -69,7 +63,7 @@
             color: #156E5C;
         } 
         .today-eats-inner .txt{
-            padding: 5px 80px;
+            padding: 5px 30px;
             font-size: 20px;
             color: #4C4A28;
             border-top: 2px dashed #4C4A28;
@@ -85,7 +79,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            margin: 80px auto;
+            margin: 70px auto;
             font-family: ChenYuluoyan;
             font-size: 32px;
             color: white;
@@ -107,11 +101,41 @@
             align-items: center;
             padding-bottom: 150px;
         }
-        .howtodo h1{
+        .howtodo .howtodo-zone{
+            max-width: 1200px;
+            margin: auto;
+        }
+        .howtodo-zone h1{
             margin: 100px;
         }
-        .howtodo video{
-
+        .howtodo-zone .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .howtodo-zone .do-card{
+            margin: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        .howtodo-zone .do-card:hover h2{
+            text-decoration: underline;
+            text-shadow: 1px 1px 10px gray;
+            z-index: 1;
+        }
+        .howtodo-zone .do-card:hover img{
+            filter: blur(3px);
+            opacity: .8;
+        }        
+        .howtodo-zone .do-card h2{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 40%;
+               margin: auto;
+            color: white;
+        }
+        .howtodo-zone .do-card img{
+            width: 100%;
         }
     </style>
 <body>
@@ -125,7 +149,6 @@
                 <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
                 <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
                 <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
-                <li><a href="instructions.html"><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
                 <li><a href=""><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
                 <div class="search-box">
                     <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
@@ -150,7 +173,7 @@
         <section class="today-eats">
             <div class="today-eats-zone">
                 <h1>今天吃什麼</h1>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+                <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
@@ -222,23 +245,48 @@
             </div>
         </section>
         <section class="howtodo">
-            <h1>跟著老師這樣做</h1>
-            <video src="pictures/product-video.mp4" controls></video>
+            <div class="howtodo-zone">
+                <h1>跟著老師這樣做</h1>
+                <div class="row row-cols-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2">
+                    <div class="col">
+                        <div class="do-card">
+                            <h2>推薦課程</h2>
+                            <img src="pictures/news.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="do-card">
+                            <h2>精選課程</h2>
+                            <img src="pictures/news.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="do-card">
+                            <h2>10分鐘料理</h2>
+                            <img src="pictures/news.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="do-card">
+                            <h2>初學者專區</h2>
+                            <img src="pictures/news.jpg" alt="">
+                        </div>
+                    </div>      
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="footer-deco"></div>
         <div class="footer-logo">
-            <a href="index.html">
+            <a class="footer-logo-link" href="index.html">
                 <img src="pictures/logo.png" alt="logo" width="100px">
                 <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-            </a>
-            
+            </a>           
         </div>
         <div class="footer-content">
             <ul class="footer-link">
                 <li><a href="">每期菜單</a></li>
-                <li><a href="">Q & A</a></li>
+                <li><a href="">購物須知</a></li>
                 <li><a href="">會員專區</a></li>
                 <li><a href="">聯絡客服</a></li>
             </ul>

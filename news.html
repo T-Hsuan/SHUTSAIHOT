@@ -16,60 +16,84 @@
         .news{
             --feat-wid: 15px;
             width: 100%;
-            margin-bottom: 150px;
+            padding-bottom: 150px;
+            margin-bottom: 120px;
             background: #F2EED1;
         }
-        .news .news-zone{
-            max-width: 1200px;
-            margin: auto;
+        .news h1{
+            padding: 50px;
         }
-        .news .news-zone .row{
+        .news .news-card-list{            
+            max-width: 1200px;
             display: flex;
             flex-wrap: wrap;
-        }            
-        .news .news-zone h1{
-            margin: 50px;
+            margin: auto;
         }
-        .news .news-zone .news-card{
-            width: 100%;
+        .news-card-list .news-card{
+            max-width: 560px;
+            height: 200px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 30px 0;
-        }
-        .news .news-zone .news-card img{
-            width: 100%;
+            justify-content: start;
+            margin: 30px auto;
+            background: white;
+            box-sizing: border-box;
             border-radius: 25px;
         }
+       .news-card img{
+            width: 45%;
+            border-radius: 25px 0 0 25px;
+        }          
         .news-card .news-inner{
             display: flex;
             flex-direction: column;
-            align-items: center;
             margin: 15px;
         }
-        .news-card .news-inner .heading{
+        .news-inner .heading{
             font-size: 24px;
         } 
-        .news-card .news-inner .news-txt{
+        .news-inner .news-txt{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin: 10px;
+            align-items: start;
         }
-        .news-txt .txt{
+        .news-txt .tag{
+            padding: 3px 5px;
             font-size: 16px;
+            display: inline-block;
             color: #4C4A28;
+            background: #F99964;
         }
         .news-txt .note{
-            margin: 10px;
             color: gray;
             font-size: 12px;
+        }
+        .news .more{
+            width: 100px;
+            line-height: 45px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 50px auto;
+            font-family: ChenYuluoyan;
+            font-size: 32px;
+            color: white;
+            background: #156E5C;
+            border: 0;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .news .more span{
+            font-size: 24px;
+        }
+        .news .more:hover{
+            background: #4C4A28;
         }
         .expert{
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 100px;
         }
         .expert h1{
             margin-bottom: 50px;
@@ -95,14 +119,13 @@
             </a>
             <ul class="menu-list">
                 <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
-                <li><a href=""><p>產品介紹</p><p class="english-menu">Products</p></a></li>
-                <li><a href=""><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
-                <li><a href=""><p>最新消息</p><p class="english-menu">News</p></a></li>
-                <li><a href=""><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
-                <li><a href=""><p>會員登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href=""><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
                 <div class="search-box">
-                    <img id="search-icon" src="pictures/icon-search.png" alt="search">
-                    <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">
+                    <input type="text" id="search-bar" placeholder="搜尋產品"  style="display: none;">
                 </div>
                 <script>
                         var searchIcon = document.getElementById('search-icon');
@@ -121,99 +144,80 @@
     </header>
     <main>
         <section class="news">
-            <div class="news-zone">
-                <h1>蔬果報報</h1>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2">
-                    <div class="col">
-                        <div class="news-card">
-                            <img src="pictures/news.jpg">
-                            <div class="news-inner">
-                                <h3 class="heading">有機農業與友善耕作的盟友</h3>
-                                <div class="news-txt">
-                                    <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
-                                    <p class="note">「引用自『有機農業推動中心』官方網站」</p>
-                                </div>
+            <h1>蔬果報報</h1>               
+                <div class="news-card-list">
+                    <div class="news-card">
+                        <img src="pictures/news.jpg">
+                        <div class="news-inner">
+                            <h3 class="heading">蔬菜喝歡慶開幕，全店8折起!!</h3>
+                            <div class="news-txt">
+                                <p class="tag">最新活動</p>
                             </div>
-                        </div>                
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2">
-                        <div class="col">
-                            <div class="news-card">
-                                <img src="pictures/news.jpg">
-                                <div class="news-inner">
-                                    <h3 class="heading">有機農業與友善耕作的盟友</h3>
-                                    <div class="news-txt">
-                                        <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
-                                        <p class="note">「引用自『有機農業推動中心』官方網站」</p>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="news-card">
-                                <img src="pictures/news.jpg">
-                                <div class="news-inner">
-                                    <h3 class="heading">有機農業與友善耕作的盟友</h3>
-                                    <div class="news-txt">
-                                        <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
-                                        <p class="note">「引用自『有機農業推動中心』官方網站」</p>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="news-card">
-                                <img src="pictures/news.jpg">
-                                <div class="news-inner">
-                                    <h3 class="heading">有機農業與友善耕作的盟友</h3>
-                                    <div class="news-txt">
-                                        <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
-                                        <p class="note">「引用自『有機農業推動中心』官方網站」</p>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="news-card">
-                                <img src="pictures/news.jpg">
-                                <div class="news-inner">
-                                    <h3 class="heading">有機農業與友善耕作的盟友</h3>
-                                    <div class="news-txt">
-                                        <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
-                                        <p class="note">「引用自『有機農業推動中心』官方網站」</p>
-                                    </div>
-                                </div>
-                            </div>                
                         </div>
-                    </div>         
+                    </div>
+                    <div class="news-card">
+                        <img src="pictures/news.jpg">
+                        <div class="news-inner">
+                            <h3 class="heading">有機農業與友善耕作的盟友</h3>
+                            <div class="news-txt">
+                                <p class="tag">有機新知</p>
+                                <p class="note">「引用自『有機農業推動中心』官方網站」</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="pictures/news.jpg">
+                        <div class="news-inner">
+                            <h3 class="heading">有機農業與友善耕作的盟友</h3>
+                            <div class="news-txt">
+                                <p class="tag">有機新知</p>
+                                <p class="note">「引用自『有機農業推動中心』官方網站」</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="pictures/news.jpg">
+                        <div class="news-inner">
+                            <h3 class="heading">有機農業與友善耕作的盟友</h3>
+                            <div class="news-txt">
+                                <p class="tag">最新活動</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-                
-        
+                <button class="more">more <span>▸</span></button>      
         </section>
-        <section class="expert">
+        <article class="expert">
             <h1>達人有話說</h1>
             <div class="expert-card">
                 <img src="pictures/farmer1.png" alt="">
-                <p>英國有機農業的先驅：伊娃巴爾芙夫人(Lady Eve Balfour)
+                <p class="expert-heading">英國有機農業的先驅：伊娃巴爾芙夫人(Lady Eve Balfour)</p>
+                <p class="expert-txt">
                     「有機農業是不能被禁錮在一套死板的規則裡的，這在本質上取決於農民的態度，如果沒有正向及生態的觀點，就不可能做到以有機方式展開農業生產。」
                     引用自『有機農業推動中心』官方網站</p>
+                    <button class="more">more <span>▸</span></button>
             </div>
             <div class="expert-card">
-                <img src="pictures/farmer2.png" alt="">
-                <p>杰羅姆˙羅德爾（Jerome Irving Rodale, 1898-1971）
-                    「一切始於土壤：健康的土壤是種植健康作物的基礎。健康的土壤 = 健康的食物 = 健康的人」
-                    引用自『有機農業推動中心』官方網站</p>
+                <img src="pictures/farmer2.jpg" alt="">
+                <p class="expert-heading">杰羅姆˙羅德爾（Jerome Irving Rodale, 1898-1971）</p>
+                <p>「一切始於土壤：健康的土壤是種植健康作物的基礎。健康的土壤 = 健康的食物 = 健康的人。」
+                                  引用自『有機農業推動中心』官方網站</p>
+                    <button class="more">more <span>▸</span></button>
             </div>
-        </section>
+            
+        </ㄇ>
     </main>
     <footer>
-        <div class="footer-deco"></div>
         <div class="footer-logo">
-            <a href="index.html">
+            <a class="footer-logo-link" href="index.html">
                 <img src="pictures/logo.png" alt="logo" width="100px">
                 <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-            </a>
-            
+            </a>           
         </div>
         <div class="footer-content">
             <ul class="footer-link">
                 <li><a href="">每期菜單</a></li>
-                <li><a href="">Q & A</a></li>
+                <li><a href="">購物須知</a></li>
                 <li><a href="">會員專區</a></li>
                 <li><a href="">聯絡客服</a></li>
             </ul>

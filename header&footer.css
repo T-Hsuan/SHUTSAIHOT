@@ -152,18 +152,11 @@ footer .footer-content {
 .footer-link li{
     margin: 20px 10px 15px;
 }
-.footer-link li:nth-child(2){
-    margin-top: 22px;
-}
 .footer-link li a {
     font-size: 20px;
     font-weight: 500;
     color: #156E5C;
     text-decoration: none;
-}
-.footer-link li:nth-child(2) a{
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
 }
 .footer-link li a:hover{
     color: #F99964;
