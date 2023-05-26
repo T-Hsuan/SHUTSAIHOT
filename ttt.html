@@ -2,118 +2,80 @@
 <html>
 <head>
   <style>
-    .report{
+    .news{
+        --feat-wid: 15px;
         width: 100%;
-        /* padding-top: 100px; */
-        position: relative;
-        padding: 100px 0;
-        background: #156E5C;
-        z-index: 0;
+        margin-bottom: 150px;
     }
-    .report .report-bg-top{
-        width: 100%;
-        position: absolute;
-        top: -85px;
-        left: 0;
-        z-index: -1;
+    .news .news-zone{
+        max-width: 1200px;
+        margin: auto;
     }
-    .report h1{
-        color: white;
-    }
-    .report .report-pic{
-        max-width: 960px;
+    .news .news-zone .row{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin: auto;
-        padding: 50px;
-        position: relative;
+    }            
+    .news .news-zone h1{
+        margin: 50px;
     }
-    .report .report-pic .report-img_s{
-        max-width: 300px;
-        margin: 10px;
-        cursor: pointer;
+    .news .news-zone .news-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
     }
-    #report-img_l-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
+    .news .news-zone .news-card img{
+        width: 100%;
+        border-radius: 25px;
     }
-    .report-img_l-popup {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 80%;
-      max-height: 80%;
-      text-align: center;
+    .news-card .news-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
     }
-    #report-img_l {
-      width: 80%;
-      object-fit: contain;
-    }
-    .report .more{
-      width: 100px;
-      line-height: 45px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
-      font-family: ChenYuluoyan;
-      font-size: 32px;
-      color: #4C4A28;
-      background: #FFEEE5;
-      border: 0;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-    .report .more span{
+    .news-card .news-inner .heading{
         font-size: 24px;
+    } 
+    .news-card .news-inner .news-txt{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        margin: 10px;
     }
-    .report .more:hover{
-        background: #F2EED1;
+    .news-txt .txt{
+        font-size: 16px;
+        color: #4C4A28;
+    }
+    .news-txt .dollars{
+        color: red;
+        font-size: 24px;
     }
   </style>
 </head>
 <body>
+  <section class="news">
+    <div class="news-zone">
+        <h1>蔬果報報</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+            <div class="col">
+                <div class="news-card">
+                    <img src="pictures/news.jpg">
+                    <div class="news-inner">
+                        <h3 class="heading">有機農業與友善耕作的盟友</h3>
+                        <div class="news-txt">
+                            <p class="txt">行政院農委會農糧署自108.05.30起全面施行「有機農業促進法」擬將我國推進國際知名之有機國度。而友善耕作農法與有機農業之栽培模式類似、但認定資格條件有所不同。</p>
+                            <p class="note">「引用自『有機農業推動中心』官方網站」</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>         
+        </div>
+    </div>
+        
 
-        <div class="report">
-          <img class="report-bg-top" src="pictures/recipe-bg-top.png" alt="">
-          <h1>檢驗報告</h1>
-          <div class="report-pic">
-            <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">
-            <div id="report-img_l-overlay">
-              <div class="report-img_l-popup">
-                <img id="report-img_l" src="pictures/report.png" alt="report-img-Large">
-              </div>
-            </div>
-            <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">
-            <div id="report-img_l-overlay">
-              <div class="report-img_l-popup">
-                <img id="report-img_l" src="pictures/report.png" alt="report-img-Large">
-              </div>
-            </div>
-            <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">
-            <div id="report-img_l-overlay">
-              <div class="report-img_l-popup">
-                <img id="report-img_l" src="pictures/report.png" alt="report-img-Large">
-              </div>
-            </div>
-          </div>
-          <button class="more">more <span>▸</span></button>
-      </div>
-      <script>
-        function showLargeImage() {
-          document.getElementById("report-img_l-overlay").style.display = "block";
-        }
-        document.getElementById("report-img_l-overlay").addEventListener("click", function() {
-          this.style.display = "none";
-        });
-      </script>
+  </section>
 </body>
 </html>

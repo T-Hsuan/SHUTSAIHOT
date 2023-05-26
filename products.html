@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT">
-    <link rel="stylesheet" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT\css.json">
     <link rel="icon" href="pictures/titleicon.png">
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
@@ -20,6 +19,14 @@
         .hot{
             width: 100%;
             background: #FFEEE5;
+            position: relative;
+            margin-bottom: 100px;
+        }
+        .hot .hot-bg-bottom{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -75px;
         }
         .hot .hot-zone{
             max-width: 1200px;
@@ -41,7 +48,7 @@
             padding: 30px!important;   
             position: absolute;         
         } */
-        .hot .hot-zone .owl-theme .item {
+        .hot .hot-zone .owl-theme .item{
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -53,7 +60,7 @@
         }
         .hot .hot-zone .owl-theme .item img{
             width: 100%;
-            max-width: 300px;
+            width: 300px;
             border-radius: 25px;
         }
         .hot .hot-zone .owl-theme .item .hot-inner{
@@ -94,7 +101,7 @@
             color: white;
         }
         .products{
-            --feat-wid:15px;
+            --feat-wid: 15px;
             width: 100%;
             margin-bottom: 150px;
         }
@@ -109,27 +116,27 @@
         .products .products-zone h1{
             margin: 50px;
         }
-        .products .products-zone .product-list{
+        .products .products-zone .product-card{
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
-        .products .products-zone .product-list img{
-            max-width: 300px;
+        .products .products-zone .product-card img{
             width: 100%;
             border-radius: 25px;
         }
-        .product-list .product-inner{
+        .product-card .product-inner{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 15px;
         }
-        .product-list .product-inner .product-heading{
+        .product-card .product-inner .heading{
             font-size: 24px;
         } 
-        .product-list .product-inner .product-txt_dollars{
+        .product-card .product-inner .product-txt_dollars{
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -144,7 +151,7 @@
             color: red;
             font-size: 24px;
         }
-        .product-list .product-inner .btn-cart{            
+        .product-card .product-inner .btn-cart{            
             width: 150px;
             padding: 5px;
             background: white;
@@ -153,7 +160,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .product-list .product-inner .btn-cart:hover{
+        .product-card .product-inner .btn-cart:hover{
             background: #156E5C;
             color: white;
         }
@@ -168,13 +175,13 @@
             <ul class="menu-list">
                 <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
                 <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
-                <li><a href=""><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
-                <li><a href=""><p>最新消息</p><p class="english-menu">News</p></a></li>
-                <li><a href=""><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
-                <li><a href=""><p>會員登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="instructions.html"><p>購物須知</p><p class="english-menu">Instructions</p></a></li>
+                <li><a href=""><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
                 <div class="search-box">
-                    <img id="search-icon" src="pictures/icon-search.png" alt="search">
                     <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
                 <script>
                         var searchIcon = document.getElementById('search-icon');
@@ -257,6 +264,7 @@
                     </div>
                 </div>
             </div>
+            <img class="hot-bg-bottom" src="pictures/bg-bottom.png" alt="">            
         </section>
         <script>
             $('.owl-carousel').owlCarousel({
@@ -281,10 +289,10 @@
             <h1>商品</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -294,10 +302,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -307,10 +315,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -320,10 +328,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -333,10 +341,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -346,10 +354,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -359,10 +367,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -372,10 +380,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -385,10 +393,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -398,10 +406,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -411,10 +419,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
@@ -424,10 +432,10 @@
                     </div>                
                 </div>
                 <div class="col">
-                    <div class="product-list">
+                    <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="product-heading">個人蔬菜盒</h3>
+                            <h3 class="heading">個人蔬菜盒</h3>
                             <div class="product-txt_dollars">
                                 <p class="txt">7日份</p>
                                 <p class="dollars">400元</p>
