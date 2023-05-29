@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="" href="C:\Users\T14 Gen 3\Desktop\SHUTSAIHOT">
     <link rel="icon" href="pictures/titleicon.png">
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="header&footer.css">
+    <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="grid.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
     <style>
@@ -74,7 +73,7 @@
             left: 0;
             right: 0;
             margin: 50px auto;
-            font-family: ChenYuluoyan;
+            font-family: 'deco-font';
             font-size: 32px;
             color: white;
             background: #156E5C;
@@ -109,6 +108,34 @@
             border: 1px solid black;
             margin: 25px;
         }
+        .expert-card .expert-inner{
+            display: flex;
+            flex-direction: column;
+        }
+        .expert-inner .expert-heading{
+            font-size: 24px;
+        }
+        .expert-inner .expert-txt{
+            font-size: 20px;
+        }
+        .expert .more{
+            width: 150px;
+            line-height: 45px;
+            margin: 10px;          
+            font-family: 'deco-font';
+            font-size: 32px;
+            color: #4C4A28;
+            background: #FFEEE5;
+            border: 0;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .expert .more span{
+            font-size: 24px;
+        }
+        .expert .more:hover{
+            background: #F2EED1;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +149,7 @@
                 <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
                 <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
                 <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
-                <li><a href=""><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <li><a href="login_register.html"><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
                 <div class="search-box">
                     <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">
                     <input type="text" id="search-bar" placeholder="搜尋產品"  style="display: none;">
@@ -191,64 +218,70 @@
             <h1>達人有話說</h1>
             <div class="expert-card">
                 <img src="pictures/farmer1.png" alt="">
-                <p class="expert-heading">英國有機農業的先驅：伊娃巴爾芙夫人(Lady Eve Balfour)</p>
-                <p class="expert-txt">
-                    「有機農業是不能被禁錮在一套死板的規則裡的，這在本質上取決於農民的態度，如果沒有正向及生態的觀點，就不可能做到以有機方式展開農業生產。」
-                    引用自『有機農業推動中心』官方網站</p>
-                    <button class="more">more <span>▸</span></button>
+                <div class="expert-inner">
+                    <p class="expert-heading">英國有機農業的先驅：伊娃巴爾芙夫人(Lady Eve Balfour)</p>
+                    <p class="expert-txt">
+                        「有機農業是不能被禁錮在一套死板的規則裡的，這在本質上取決於農民的態度，如果沒有正向及生態的觀點，就不可能做到以有機方式展開農業生產。」
+                        引用自『有機農業推動中心』官方網站</p>
+                    <button class="more">read more <span>▸</span></button>
+                </div>
             </div>
             <div class="expert-card">
                 <img src="pictures/farmer2.jpg" alt="">
-                <p class="expert-heading">杰羅姆˙羅德爾（Jerome Irving Rodale, 1898-1971）</p>
-                <p>「一切始於土壤：健康的土壤是種植健康作物的基礎。健康的土壤 = 健康的食物 = 健康的人。」
-                                  引用自『有機農業推動中心』官方網站</p>
-                    <button class="more">more <span>▸</span></button>
+                <div class="expert-inner">
+                    <p class="expert-heading">杰羅姆˙羅德爾（Jerome Irving Rodale, 1898-1971）</p>
+                    <p class="expert-txt">「一切始於土壤：健康的土壤是種植健康作物的基礎。健康的土壤 = 健康的食物 = 健康的人。」
+                    引用自『有機農業推動中心』官方網站</p>
+                    <button class="more">read more <span>▸</span></button>
+                </div>
             </div>
             
-        </ㄇ>
+        </article>
     </main>
     <footer>
-        <div class="footer-logo">
-            <a class="footer-logo-link" href="index.html">
-                <img src="pictures/logo.png" alt="logo" width="100px">
-                <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-            </a>           
-        </div>
-        <div class="footer-content">
-            <ul class="footer-link">
-                <li><a href="">每期菜單</a></li>
-                <li><a href="">購物須知</a></li>
-                <li><a href="">會員專區</a></li>
-                <li><a href="">聯絡客服</a></li>
-            </ul>
-            <div class="footer-companyInfo">
-                <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
-                <p>服務時間:周一至周五 09:00-18:00</p>
-                <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+        <div class="footer">
+            <div class="footer-logo">
+                <a class="footer-logo-link" href="index.html">
+                    <img src="pictures/logo.png" alt="logo" width="100px">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
+                </a>           
             </div>
-            <div class="footer-priv_copy">
-                <a class="privacy" href="">服務條款與隱私權政策</a>
-                <p class="copyright"> &copy; 2023 SHU TSAI HOT</p>
+            <div class="footer-content">
+                <ul class="footer-link">
+                    <li><a href="">每期菜單</a></li>
+                    <li><a href="">購物須知</a></li>
+                    <li><a href="">會員專區</a></li>
+                    <li><a href="">聯絡客服</a></li>
+                </ul>
+                <div class="footer-companyInfo">
+                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
+                    <p>服務時間:周一至周五 09:00-18:00</p>
+                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                </div>
+                <div class="footer-priv_copy">
+                    <a class="privacy" href="">服務條款與隱私權政策</a>
+                    <p class="copyright"> &copy; 2023 SHU TSAI HOT</p>
+                </div>
             </div>
+            <div class="footer-followus">
+                <h2>Follow us</h2>
+                <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+            </div>
+                <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
+                >
+            <!-- top script -->
+            <script>
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
+            <!-- top script -->
         </div>
-        <div class="footer-followus">
-            <h2>Follow us</h2>
-            <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
-        </div>
-            <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
-            >
-        <!-- top script -->
-        <script>
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        </script>
-        <!-- top script -->
     </footer>
 </body>
 </html>

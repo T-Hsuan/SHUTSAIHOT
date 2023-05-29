@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/titleicon.png">
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <title>蔬菜喝 | SHU TSAI HOT</title>
+    <style>
+        .login{
+            width: 100%;
+            background: #156E5C;           
+        }
+        .login .login-box{
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-box h1{
+            margin: 50px;
+            color: white;
+        }
+        .login-box #account ,#password{
+            width: 350px;
+            height: 50px;
+            margin: 15px;
+            padding-left: 15px;
+            font-size: 20px;
+            border: none;
+            border-radius: 15px;
+        }
+        .login-box .note{
+            width: 350px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .note .rem-check #remember{
+            margin-top: 5px;
+            width: 20px;
+            height: 20px;
+        }
+        .note .rem-check #rem-txt{
+            margin-left: 5px;
+            color: white;
+            font-size: 20px;
+        }
+        .note .forget{
+            color: #F2EED1;
+        }
+        .login-box #submit{
+            width: 150px;
+            height: 50px;
+            margin: 25px;  
+            background: #F99964;
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 15px;          
+        }
+        .login-box .register{
+            margin: 30px;
+            color: white;
+        }
+        .login-box .register a{
+            color: #F2EED1;
+        }
+        .login .other-login{
+            text-align: center;
+            padding-bottom: 150px;
+        }
+        .other-login h2{
+            display: inline-block;
+            width: 500px;
+            margin: 70px 0 25px;
+            padding-top: 25px;
+            color: #b8b8b8;
+            border-top: 1px solid #b8b8b8;
+        }
+        .other-login .login-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-icon i{
+            margin: 15px;
+            color: white;
+            font-size: 60px;
+        }
+        .login-icon .fa-google{
+            font-size: 24px;
+            border: 4px solid white;
+            margin: 25px 25px 25px 20px;
+            padding: 5px;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <ul class="menu-list">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="login_register.html"><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <script>
+                        var searchIcon = document.getElementById('search-icon');
+                        var searchBar = document.getElementById('search-bar');
+                        searchIcon.addEventListener('click', function() {
+                            if (searchBar.style.display === 'none') {
+                            searchBar.style.display = 'block';
+                            } 
+                            else {
+                                searchBar.style.display = 'none';
+                            }
+                        })
+                    </script>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="login">
+            <div class="login-box">
+                <h1>會員登入</h1>
+                <input type="text" name="account" id="account" maxlength="10" placeholder="手機號碼">
+                <input type="password" name="password" id="password" placeholder="密碼">               
+                <div class="note">
+                    <div class="rem-check">
+                        <input type="checkbox" name="remember" value="remember" id="remember">
+                        <label for="remember" id="rem-txt">記住我</label>
+                    </div>
+                    <p class="forget">忘記密碼</p>
+                </div>
+                <input type="submit" value="登入" id="submit">
+                <p class="register">還沒有蔬菜喝的帳號嗎 ? 趕快來<a href="register.html">註冊</a></p>
+            </div>
+            <div class="other-login">
+                <h2>以其他方式登入</h2>
+                <div class="login-icon">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="lab la-line"></i>
+                    <i class="lab la-facebook-square"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <a class="footer-logo-link" href="index.html">
+                    <img src="pictures/logo.png" alt="logo" width="100px">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
+                </a>           
+            </div>
+            <div class="footer-content">
+                <ul class="footer-link">
+                    <li><a href="">每期菜單</a></li>
+                    <li><a href="">購物須知</a></li>
+                    <li><a href="">會員專區</a></li>
+                    <li><a href="">聯絡客服</a></li>
+                </ul>
+                <div class="footer-companyInfo">
+                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
+                    <p>服務時間:周一至周五 09:00-18:00</p>
+                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                </div>
+                <div class="footer-priv_copy">
+                    <a class="privacy" href="">服務條款與隱私權政策</a>
+                    <p class="copyright"> &copy; 2023 SHU TSAI HOT</p>
+                </div>
+            </div>
+            <div class="footer-followus">
+                <h2>Follow us</h2>
+                <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+            </div>
+                <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
+                >
+            <!-- top script -->
+            <script>
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
+            <!-- top script -->
+        </div>
+    </footer>
+</body>
+</html>
