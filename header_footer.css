@@ -126,6 +126,7 @@ footer{
     margin: auto;
     color: #4C4A28;
     background: #f2EED1;
+    z-index: 1;
 }
 .footer .footer-logo::before{
     content: "";

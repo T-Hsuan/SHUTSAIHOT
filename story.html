@@ -185,7 +185,7 @@
             max-width: 681px;
             position: absolute;
             right: 1%;
-            bottom: 15%;
+            bottom: 30%;
         }
         .feat-deco .feat-deco_b{
             max-width: 660px;
@@ -250,6 +250,7 @@
             margin: auto;
             padding: 50px;
             position: relative;
+            z-index: 2;
         }
         .report .report-pic .report-img_s{
             max-width: 300px;
@@ -315,6 +316,31 @@
         .report .more:hover{
             background: #F2EED1;
         }
+        .report .report-w{
+            width: 130px;
+            position: absolute;
+            top: 0;
+            left: 10%;
+        }
+        .report .report-p{
+            width: 200px;
+            position: absolute;
+            top: 9%;
+            right: 5%;
+            z-index: 0;
+        }
+        .report .report-d{
+            width: 180px;
+            position: absolute;
+            bottom: 17%;
+            left: 20%;
+        }
+        .report .report-g{
+            width: 150px;
+            position: absolute;
+            bottom: -10%;
+            right: 25%;
+        }
     </style>
 </head>
 <body>
@@ -351,11 +377,11 @@
     <main>
         <div class="about">           
             <div class="about-zone">
-                <img class="about-deco" src="pictures/about-deco_love.png"></img>
+                <img class="about-deco" src="pictures/about-deco_love.png" alt="decorate"></img>
                 <h1 class="h1-en-about">ABOUT US</h1>
                 <h1 class="h1-ch">關於蔬菜喝</h1>
                 <h1 class="h1-en">關於SHU TSAI HOT</h1>                
-                <img class="about-logo" src="pictures/about-logo.png" alt="">
+                <img class="about-logo" src="pictures/about-logo.png" alt="about-logo">
                 <div class="about-card">
                     <div class="about-card-top">
                         <p>歡迎來到「蔬菜喝」！我們是一家提供有機、無農藥、非基因改造的蔬菜箱和蔬果汁的店家。我們的蔬菜和水果皆是與當地小農和有機農場合作生產，不使用任何農藥、化學肥料或基因改造技術，確保您和您的家人食用到最新鮮、最健康的產品。我們每週會根據季節和農產品供應情況來調整我們的產品組合，確保您總能夠享受到最好的品質。</p>
@@ -375,16 +401,16 @@
         <div class="feature">
             <h1>我們的特色</h1>
             <div class="feat-deco">
-                <img class="feat-deco_h1" src="pictures/heading-em2.png" alt="">
-                <img class="feat-deco_t" src="pictures/deco-light1.png" alt="">
-                <img class="feat-deco_c" src="pictures/deco-light2.png" alt="">
-                <img class="feat-deco_b" src="pictures/deco-light3.png" alt="">
+                <img class="feat-deco_h1" src="pictures/heading-em2.png" alt="decorate">
+                <img class="feat-deco_t" src="pictures/deco-light1.png" alt="decorate">
+                <img class="feat-deco_c" src="pictures/deco-light2.png" alt="decorate">
+                <img class="feat-deco_b" src="pictures/deco-light3.png" alt="decorate">
             </div>
             <div class="feature-zone">
                 <div class="row row-cols-1">
                     <div class="col">
                         <div class="feat-content">
-                            <img src="pictures/feat-fresh.png" alt="">
+                            <img src="pictures/feat-fresh.png" alt="fresh-pic">
                             <div class="inner">
                                 <h2>新鮮現採，美味遞送</h2>
                                 <p>我們的蔬菜盒皆為當天現採，隔天立即低溫配送，健康營養不流失。蔬果汁採用以超高壓、低溫的方式萃取，保留蔬果的營養成分不被高溫破壞，同時又能滅菌，達到食安衛生標準。</p>
@@ -393,7 +419,7 @@
                     </div>
                     <div class="col">
                         <div class="feat-content">
-                            <img src="pictures/feat-innocuity.png" alt="">
+                            <img src="pictures/feat-innocuity.png" alt="innocuity-pic">
                             <div class="inner">
                                 <h2>無毒無農藥添加非基因改造</h2>
                                 <p>產品皆非基因改造及無農藥添加，較一般農產品擁有更高營養價值，保留天然的好滋味，天然的好滋味，每期進行農藥檢驗，保證讓您吃得安心。</p>
@@ -402,7 +428,7 @@
                     </div>
                     <div class="col">
                         <div class="feat-content">
-                            <img src="pictures/feat-variety.png" alt=""> 
+                            <img src="pictures/feat-variety.png" alt="variety-pic"> 
                             <div class="inner">
                                 <h2>搭配多元，隨心所欲</h2>
                                 <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
@@ -413,20 +439,26 @@
             </div>
         </div>
         <div class="report">
-            <img class="report-bg-top" src="pictures/recipe-bg-top.png" alt="">
+            <img class="report-bg-top" src="pictures/recipe-bg-top.png" alt="decorate">
             <h1>檢驗報告</h1>
             <div class="report-pic">
-              <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">              
-              <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">
-              <img class="report-img_s" src="pictures/report.png" alt="report-img" onclick="showLargeImage()">
+              <img class="report-img_s" src="pictures/report.png" alt="report-pic" onclick="showLargeImage()">              
+              <img class="report-img_s" src="pictures/report.png" alt="report-pic" onclick="showLargeImage()">
+              <img class="report-img_s" src="pictures/report.png" alt="report-pic" onclick="showLargeImage()">
             </div>
             <button class="more">more <span>▸</span></button>
+            <div class="report-deco">
+                <img class="report-w" src="pictures/recipe-deco_w.png" alt="decorate">
+                <img class="report-p" src="pictures/recipe-deco_p.png" alt="decorate">
+                <img class="report-d" src="pictures/recipe-deco_d.png" alt="decorate">
+                <img class="report-g" src="pictures/recipe-deco_g.png" alt="decorate">
+            </div> 
         </div>
         <section class="report-pic_L">
             <div id="report-img_l-overlay">
                 <div class="report-img_l-popup">
                     <img id="report-img_l" src="pictures/report.png" alt="report-img-Large">
-                    <img class="close" src="pictures/close.png" alt="">
+                    <img class="close" src="pictures/close.png" alt="close">
                 </div>
               </div>
         </section>
@@ -439,7 +471,7 @@
             this.style.display = "none";
           });
         </script>
-        <!-- report script end -->
+        <!-- report script end --> 
     </main>
     <footer>
         <div class="footer">        

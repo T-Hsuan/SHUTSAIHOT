@@ -12,66 +12,71 @@
     <link rel="stylesheet" href="header_footer.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
     <style>
-        .login{
+        .register{
             width: 100%;
             background: #156E5C;           
         }
-        .login .login-box{
+        .register .register-box{
             max-width: 1200px;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .login-box h1{
+        .register-box h1{
             margin: 50px;
             color: white;
         }
-        .login-box #account ,#password{
+        .register-box label{
+            color: white;
+            font-size: 20px;
+        }
+        .register-box label > input{
             width: 350px;
             height: 50px;
             margin: 15px;
-            padding-left: 15px;
+            padding: 0 15px;
             font-size: 20px;
             border: none;
             border-radius: 15px;
         }
-        .login-box .note{
-            width: 350px;
+        .register-box .agreement-check{
+            width: 450px;
             margin: 10px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
         }
-        .note .rem-check #remember{
-            margin-top: 5px;
-            width: 20px;
-            height: 20px;
+        .agreement-check label{
+            height: 30px;
+            font-size: 16px;
+            color: rgb(208, 208, 208);
+            margin-left: 40px;
         }
-        .note .rem-check #rem-txt{
-            margin-left: 5px;
-            color: white;
-            font-size: 20px;
+        .agreement-check #subscribe ,.agreement-check #privacy-confirm{
+            width: 16px;
+            height: 16px;
         }
-        .note .forget{
-            color: #F2EED1;
-        }
-        .login-box #submit{
+        .register-box #submit{
             width: 150px;
             height: 50px;
-            margin: 25px;  
+            margin: 50px;  
             background: #F99964;
             color: white;
             font-size: 24px;
             border: none;
-            border-radius: 15px;          
+            border-radius: 15px; 
+            cursor: pointer;         
         }
-        .login-box .register{
+        .register-box #submit:hover{
+            color: #4c4e28;
+            background: #FFEEE5;
+        }
+        .register-box .login{
             margin: 30px;
             color: white;
         }
-        .login-box .register a{
-            color: #F2EED1;
+        .register-box .login a{
+            color: #F99964;
         }
     </style>
 </head>
@@ -107,20 +112,24 @@
         </nav>
     </header>
     <main>
-        <div class="login">
-            <div class="login-box">
+        <div class="register">
+            <div class="register-box">
                 <h1>會員註冊</h1>
-                <input type="text" name="account" id="account" maxlength="10" placeholder="手機號碼">
-                <input type="password" name="password" id="password" placeholder="密碼">               
-                <div class="note">
-                    <div class="rem-check">
-                        <input type="checkbox" name="remember" value="remember" id="remember">
-                        <label for="remember" id="rem-txt">記住我</label>
-                    </div>
-                    <p class="forget">忘記密碼</p>
-                </div>
-                <input type="submit" value="登入" id="submit">
-                <p class="register">還沒有蔬菜喝的帳號嗎 ? 趕快來<a href="register.html">註冊</a></p>
+                <label for="name">姓名<input type="text" name="name" id="name" placeholder="姓名"></label>
+                
+                <label for="birth">生日<input type="date" name="birth" id="birth" placeholder="生日"></label>
+                
+                <label for="account">帳號<input type="text" name="account" id="account" maxlength="10" placeholder="請輸入手機號碼"></label>
+                
+                <label for="password">密碼<input type="password" name="password" id="password" placeholder="密碼需6~12碼" minlength="6" maxlength="12"></label>
+                
+                <label for="email">信箱<input type="email" name="email" id="email" placeholder="請輸入email"> </label>
+                <div class="agreement-check">  
+                    <label for="subscribe"><input type="checkbox" name="subscribe" value="subscribe" id="subscribe">我願意收到電子報</label>
+                    <label for="privacy-confirm"><input type="checkbox" name="privacy-confirm" value="privacy-confirm" id="privacy-confirm">我已閱讀並同意隱私權條款</label>
+                </div>             
+                <input type="submit" value="註冊" id="submit">
+                <p class="login">我有帳號了 <a href="login_register.html">登入</a></p>
             </div>
         </div>
     </main>

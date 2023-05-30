@@ -55,6 +55,10 @@
         }
         .note .forget{
             color: #F2EED1;
+            cursor: pointer;
+        }
+        .note .forget:hover{
+            color: white;
         }
         .login-box #submit{
             width: 150px;
@@ -64,13 +68,21 @@
             color: white;
             font-size: 24px;
             border: none;
-            border-radius: 15px;          
+            border-radius: 15px;
+            cursor: pointer;          
+        }
+        .login-box #submit:hover{
+            color: #4c4e28;
+            background: #FFEEE5;
         }
         .login-box .register{
             margin: 30px;
             color: white;
         }
         .login-box .register a{
+            color: #F99964;
+        }
+        .login-box .register a:hover{
             color: #F2EED1;
         }
         .login .other-login{
@@ -80,9 +92,9 @@
         .other-login h2{
             display: inline-block;
             width: 500px;
-            margin: 70px 0 25px;
+            margin: 50px 0 25px;
             padding-top: 25px;
-            color: #b8b8b8;
+            color: #cacaca;
             border-top: 1px solid #b8b8b8;
         }
         .other-login .login-icon{
@@ -94,13 +106,27 @@
             margin: 15px;
             color: white;
             font-size: 60px;
+            cursor: pointer;
+        }
+        .login-icon i:hover{
+            color: #F2EED1;
         }
         .login-icon .fa-google{
             font-size: 24px;
             border: 4px solid white;
             margin: 25px 25px 25px 20px;
-            padding: 5px;
-            border-radius: 9px;
+            padding: 6px;
+            border-radius: 8px;
+        }
+        .login-icon .fa-google:hover{
+            color: #F2EED1;
+            border: 4px solid #F2EED1;
+        }
+        .login .deco-heart{
+            width: 300px;
+            position: absolute;
+            right: 15%;
+            top: 30%;
         }
     </style>
 </head>
@@ -137,6 +163,7 @@
     </header>
     <main>
         <div class="login">
+            <img class="deco-heart" src="pictures/deco_love.png" alt="decorate">
             <div class="login-box">
                 <h1>會員登入</h1>
                 <input type="text" name="account" id="account" maxlength="10" placeholder="手機號碼">
@@ -149,7 +176,7 @@
                     <p class="forget">忘記密碼</p>
                 </div>
                 <input type="submit" value="登入" id="submit">
-                <p class="register">還沒有蔬菜喝的帳號嗎 ? 趕快來<a href="register.html">註冊</a></p>
+                <p class="register">還沒有蔬菜喝的帳號嗎 ? 趕快來 <a href="register.html">註冊</a></p>
             </div>
             <div class="other-login">
                 <h2>以其他方式登入</h2>

@@ -110,23 +110,47 @@
             position: relative;
             cursor: pointer;
         }
-        .howtodo-zone .do-card:hover h2{
-            text-decoration: underline;
-            text-shadow: 1px 1px 10px gray;
-            z-index: 1;
-        }
-        .howtodo-zone .do-card:hover img{
-            filter: blur(3px);
-            opacity: .8;
-        }        
         .howtodo-zone .do-card h2{
             position: absolute;
             left: 0;
             right: 0;
             top: 40%;
-               margin: auto;
-            color: white;
+            margin: auto;
+            color: white;            
+            display: inline-block;
+            text-shadow: 0 0 25px black;
+            z-index: 1;
         }
+        .howtodo-zone .do-card h2::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            height: 3px;
+            margin: auto;
+            width: 0;
+            background-color: #F99964; 
+            
+        }
+        .howtodo-zone .do-card:hover h2::after{
+            width: 300px;
+            text-shadow: 5px 5px 10px gray;
+            animation: width .1s ease-out;
+        }                
+        @keyframes width{
+            0% { width: 0;}
+            100% { width: 100px;}
+        }
+        /* .howtodo-zone .do-card:hover h2{
+            text-decoration: underline;
+            text-shadow: 5px 5px 10px gray;
+            z-index: 1;
+        } */
+        .howtodo-zone .do-card:hover img{
+            filter: blur(3px);
+            opacity: .8;
+        }        
         .howtodo-zone .do-card img{
             width: 100%;
         }
@@ -170,10 +194,10 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish1.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
-                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
+                                    <h3 class="heading">油醋拌蔬果</h3>
+                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約5分鐘</p>
                                 </div>
                             </div>
                         </a>
@@ -181,9 +205,9 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish2.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
+                                    <h3 class="heading">蒜辣爆炒軟絲</h3>
                                     <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
                                 </div>
                             </div>
@@ -192,10 +216,10 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish3.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
-                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
+                                    <h3 class="heading">蝦仁蛋炒飯</h3>
+                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約13分鐘</p>
                                 </div>
                             </div>
                         </a>               
@@ -203,10 +227,10 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish4.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
-                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
+                                    <h3 class="heading">蒜炒蔬菜義大利麵</h3>
+                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約15分鐘</p>
                                 </div>
                             </div>
                         </a>               
@@ -214,10 +238,10 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish5.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
-                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
+                                    <h3 class="heading">清爽莎莎醬牛肉</h3>
+                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約30分鐘</p>
                                 </div>
                             </div>
                         </a>               
@@ -225,10 +249,10 @@
                     <div class="col">
                         <a href="">
                             <div class="today-eats-card">
-                                <img src="pictures/dish.png">
+                                <img src="pictures/todayeats/dish6.png">
                                 <div class="today-eats-inner">
-                                    <h3 class="heading">清炒高麗菜</h3>
-                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約10分鐘</p>
+                                    <h3 class="heading">醬燒滷肉</h3>
+                                    <p class="txt"><i class="lar la-clock"></i> 料理時間 約60分鐘</p>
                                 </div>
                             </div>
                         </a>               
@@ -244,7 +268,7 @@
                     <div class="col">
                         <div class="do-card">
                             <h2>精選課程</h2>
-                            <img src="pictures/news.jpg" alt="">
+                            <img src="pictures/do-selection.jpg" alt="">
                         </div>
                     </div>
                     <div class="col">
@@ -256,13 +280,13 @@
                     <div class="col">
                         <div class="do-card">
                             <h2>10分鐘料理</h2>
-                            <img src="pictures/news.jpg" alt="">
+                            <img src="pictures/do-ten.jpg" alt="">
                         </div>
                     </div>
                     <div class="col">
                         <div class="do-card">
                             <h2>初學者專區</h2>
-                            <img src="pictures/news.jpg" alt="">
+                            <img src="pictures/do-first.jpg" alt="">
                         </div>
                     </div>      
                 </div>
