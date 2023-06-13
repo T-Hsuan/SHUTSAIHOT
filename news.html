@@ -1,146 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pictures/titleicon.png">
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
-    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="news.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
-    <style>
-        .news{
-            --feat-wid: 15px;
-            width: 100%;
-            padding-bottom: 150px;
-            margin-bottom: 120px;
-            background: #F2EED1;
-        }
-        .news h1{
-            padding: 50px;
-        }
-        .news .news-card-list{            
-            max-width: 1200px;
-            display: flex;
-            flex-wrap: wrap;
-            margin: auto;
-        }
-        .news-card-list .news-card{
-            max-width: 560px;
-            height: 200px;
-            display: flex;
-            justify-content: start;
-            margin: 30px auto;
-            background: white;
-            box-sizing: border-box;
-            border-radius: 25px;
-        }
-       .news-card img{
-            width: 45%;
-            border-radius: 25px 0 0 25px;
-        }          
-        .news-card .news-inner{
-            display: flex;
-            flex-direction: column;
-            margin: 15px;
-        }
-        .news-inner .heading{
-            font-size: 24px;
-        } 
-        .news-inner .news-txt{
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-        .news-txt .tag{
-            padding: 3px 5px;
-            font-size: 16px;
-            display: inline-block;
-            color: #4C4A28;
-            background: #F99964;
-        }
-        .news-txt .note{
-            color: gray;
-            font-size: 12px;
-        }
-        .news .more{
-            width: 100px;
-            line-height: 45px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: 50px auto;
-            font-family: 'deco-font';
-            font-size: 32px;
-            color: white;
-            background: #156E5C;
-            border: 0;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .news .more span{
-            font-size: 24px;
-        }
-        .news .more:hover{
-            background: #4C4A28;
-        }
-        .expert{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 100px;
-        }
-        .expert h1{
-            margin-bottom: 50px;
-        }
-        .expert-card{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 768px;
-        }
-        .expert-card img{
-            width: 50%;
-            border: 1px solid black;
-            margin: 25px;
-        }
-        .expert-card .expert-inner{
-            display: flex;
-            flex-direction: column;
-        }
-        .expert-inner .expert-heading{
-            font-size: 24px;
-        }
-        .expert-inner .expert-txt{
-            font-size: 20px;
-        }
-        .expert-inner .more{
-           align-self: self-end; 
-            width: 150px;
-            line-height: 45px;
-            margin: 10px;          
-            font-family: 'deco-font';
-            font-size: 32px;
-            color: #4C4A28;
-            background: #FFEEE5;
-            border: 0;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .expert-inner .more span{
-            font-size: 24px;
-        }
-        .expert-inner .more:hover{
-            background: #F2EED1;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <header>        
         <nav class="menu">
             <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
                 <img src="pictures/menu-logo.png" alt="logo">
@@ -152,63 +24,101 @@
                 <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
                 <li><a href="login_register.html"><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
                 <div class="search-box">
-                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">
-                    <input type="text" id="search-bar" placeholder="搜尋產品"  style="display: none;">
+                    <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
-                <script>
-                        var searchIcon = document.getElementById('search-icon');
-                        var searchBar = document.getElementById('search-bar');
-                        searchIcon.addEventListener('click', function() {
-                            if (searchBar.style.display === 'none') {
-                            searchBar.style.display = 'block';
-                            } 
-                            else {
-                                searchBar.style.display = 'none';
-                            }
-                        })
-                    </script>
             </ul>
+        </nav>
+        <nav class="menu_small-screen">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <div id="hamburger" class="hamburger">
+                <img id="ham-menu" class="ham-menu" src="pictures/hamburger-menu.png" alt="menu">
+                <span id="ham-line_t" class="ham-line_t"></span>
+                <span id="ham-line_c" class="ham-line_c"></span>
+                <p id="menu-txt" class="menu-txt">menu</p>
+            </div>           
+            <ul id="menu-list" class="hide">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
+                <li><a href="FAQ_contactus.html#FAQ"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
+                <li><a href="FAQ_contactus.html#contactus"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <div class="followus">
+                    <p class="followus-heading">Follow us</p>
+                    <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+                </div>
+                <div class="login_register">
+                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
+                </div>                
+            </ul>
+            <div id="menu-list_bg" class="hide"></div>
         </nav>
     </header>
     <main>
         <section class="news">
-            <h1>蔬果報報</h1>               
+            <h1>蔬果報報</h1>            
+            <div class="news-deco">
+                <img class="h1-deco" src="pictures/heading-em2.png" alt="decorate">
+                <!-- <img class="news-deco_t" src="pictures/recipe-deco_d.png" alt="decorate">
+                <img class="news-deco_c" src="pictures/recipe-deco_w.png" alt="decorate"> -->
+            </div>
+                                       
                 <div class="news-card-list">
                     <div class="news-card">
-                        <img src="pictures/news.jpg">
+                        <div class="news-pic">
+                            <img src="pictures/news.png" alt="news-pic">
+                        </div>
                         <div class="news-inner">
                             <h3 class="heading">蔬菜喝歡慶開幕，全店8折起!!</h3>
                             <div class="news-txt">
                                 <p class="tag">最新活動</p>
+                                <p class="note">即日起至112.12.31止</p>
                             </div>
                         </div>
                     </div>
-                    <div class="news-card">
-                        <img src="pictures/news.jpg">
+                    <div class="news-card" onclick="window.location.href='register.html'">
+                        <div class="news-pic">
+                            <img src="pictures/news.png" alt="news-pic">
+                        </div>
                         <div class="news-inner">
                             <h3 class="heading">加入會員可享多重好禮</h3>
                             <div class="news-txt">
-                                <p class="tag">最新活動</p>
+                                <p class="tag">常駐活動</p>
+                                <p class="note">點我立即加入成為蔬菜喝的一員!!</p>
                             </div>
                         </div>
                     </div>
                     <div class="news-card">
-                        <img src="pictures/news.jpg">
+                        <div class="news-pic">
+                            <img src="pictures/emission.jpg" alt="news-pic">
+                        </div>
                         <div class="news-inner">
-                            <h3 class="heading">有機農業與友善耕作的盟友</h3>
+                            <h3 class="heading">在地資源循環模式、提升土壤有機質含量</h3>
                             <div class="news-txt">
                                 <p class="tag">有機新知</p>
-                                <p class="note">「引用自『有機農業推動中心』官方網站」</p>
+                                <p class="note">「引用自『有機農業推動中心』官方網站」<br>&ensp;112.05.30</p>
                             </div>
                         </div>
                     </div>
                     <div class="news-card">
-                        <img src="pictures/news.jpg">
+                        <div class="news-pic">
+                            <img src="pictures/bee.jpg" alt="news-pic">
+                        </div>
                         <div class="news-inner">
                             <h3 class="heading">有機農業與友善耕作的盟友</h3>
                             <div class="news-txt">
                                 <p class="tag">有機新知</p>
-                                <p class="note">「引用自『有機農業推動中心』官方網站」</p>
+                                <p class="note">「引用自『有機農業推動中心』官方網站」<br>&ensp;112.06.01</p>
                             </div>
                         </div>
                     </div>
@@ -216,48 +126,61 @@
                 <button class="more">more <span>▸</span></button>      
         </section>
         <article class="expert">
-            <h1>達人有話說</h1>
+            <h1>達人有話說</h1>           
             <div class="expert-card">
-                <img src="pictures/farmer1.png" alt="">
-                <div class="expert-inner">
+                <img class="expert-card-pic" src="pictures/farmer1.png" alt="expert-pic">
+                <img class="expert-card-pic_deco" src="pictures/farmer_deco.png" alt="decorate">
+                <div class="expert-inner">                    
                     <p class="expert-heading">英國有機農業的先驅：伊娃巴爾芙夫人(Lady Eve Balfour)</p>
                     <p class="expert-txt">
                         「有機農業是不能被禁錮在一套死板的規則裡的，這在本質上取決於農民的態度，如果沒有正向及生態的觀點，就不可能做到以有機方式展開農業生產。」
                         引用自『有機農業推動中心』官方網站</p>
-                    <button class="more">read more <span>▸</span></button>
+                    <div class="read-more">read more <span>⇀</span></div>
                 </div>
             </div>
             <div class="expert-card">
-                <img src="pictures/farmer2.jpg" alt="">
-                <div class="expert-inner">
+                <img class="expert-card-pic" src="pictures/farmer2.png" alt="expert-pic">
+                <img class="expert-card-pic_deco" src="pictures/farmer_deco.png" alt="decorate">
+                <div class="expert-inner">                    
                     <p class="expert-heading">杰羅姆˙羅德爾（Jerome Irving Rodale, 1898-1971）</p>
                     <p class="expert-txt">「一切始於土壤：健康的土壤是種植健康作物的基礎。健康的土壤 = 健康的食物 = 健康的人。」
                     引用自『有機農業推動中心』官方網站</p>
-                    <button class="more">read more <span>▸</span></button>
+                    <div class="read-more">read more <span>⇀</span></div>
                 </div>
+                
             </div>
-            
+            <button class="more">more <span>▸</span></button>
         </article>
     </main>
     <footer>
         <div class="footer">
             <div class="footer-logo">
                 <a class="footer-logo-link" href="index.html">
-                    <img src="pictures/logo.png" alt="logo" width="100px">
-                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-                </a>           
+                    <img src="pictures/logo.png" alt="logo" width="66.666666%">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="100%">    
+                </a>
+                <a class="footer-logo-link_phone" href="index.html"><img  src="pictures/menu-logo.png" alt="logo"></a>           
             </div>
             <div class="footer-content">
                 <ul class="footer-link">
-                    <li><a href="">每期菜單</a></li>
-                    <li><a href="">購物須知</a></li>
-                    <li><a href="">會員專區</a></li>
-                    <li><a href="">聯絡客服</a></li>
+                    <li><a href="index.html#recipe" >每期菜單</a></li>
+                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="login_register.html">會員專區</a></li>
+                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
                 </ul>
                 <div class="footer-companyInfo">
-                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
-                    <p>服務時間:周一至周五 09:00-18:00</p>
-                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd><a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a></dd>
+                    </dl>
+                    <dl>       
+                        <dt>服務時間</dt>
+                        <dd>周一至周五 <span>09:00-18:00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>地址</dt>
+                        <dd>蔬菜縣蔬菜鄉蔬菜路<span>888</span>號</dd>
+                    </dl>
                 </div>
                 <div class="footer-priv_copy">
                     <a class="privacy" href="">服務條款與隱私權政策</a>
@@ -265,24 +188,15 @@
                 </div>
             </div>
             <div class="footer-followus">
-                <h2>Follow us</h2>
-                <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+              <p class="footer-followus-heading">Follow us</p>
+              <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
             </div>
                 <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
                 >
-            <!-- top script -->
-            <script>
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            </script>
-            <!-- top script -->
         </div>
     </footer>
+    <script src="all.js"></script> 
 </body>
 </html>

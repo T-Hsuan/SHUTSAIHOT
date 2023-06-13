@@ -1,172 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pictures/titleicon.png">
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="grid.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
-    <style>
-        main{
-            width: 100%;
-        }
-        .hot{
-            width: 100%;
-            background: #FFEEE5;
-            position: relative;
-            margin-bottom: 100px;
-        }
-        .hot .hot-bg-bottom{
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: -75px;
-        }
-        .hot .hot-zone{
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px;
-        }
-        .hot .hot-zone h1{
-            margin-bottom: 50px;
-        }
-        /* .owl-carousel .owl-nav button.owl-prev{
-            background-color: gray;
-            color: #fff;
-            padding: 30px!important;
-            position: absolute;
-        }
-        .owl-carousel .owl-nav button.owl-next{
-            background-color: gray;
-            color: #fff;
-            padding: 30px!important;   
-            position: absolute;         
-        } */
-        .hot .hot-zone .owl-theme .item{
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            position: relative;
-            width: 300px;
-            box-sizing: border-box;
-            margin: auto;
-        }
-        .hot .hot-zone .owl-theme .item img{
-            width: 100%;
-            width: 300px;
-            border-radius: 25px;
-        }
-        .hot .hot-zone .owl-theme .item .hot-inner{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px;
-        }
-        .hot .hot-zone .owl-theme .item .hot-inner .hot-heading{
-            font-size: 24px;
-        } 
-        .hot .hot-zone .owl-theme .item .hot-inner .hot-txt_dollars{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 150px;
-            margin: 10px;
-        }
-        .hot-txt_dollars .txt{
-            font-size: 16px;
-            color: #4C4A28;
-        }
-        .hot-txt_dollars .dollars{
-            color: red;
-            font-size: 24px;
-        }
-        .hot .hot-zone .owl-theme .item .hot-inner .btn-cart{            
-            width: 150px;
-            padding: 5px;
-            background: white;
-            color: #4C4A28;
-            border: 1px solid #4C4A28;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .hot .hot-zone .owl-theme .item .hot-inner .btn-cart:hover{
-            background: #156E5C;
-            color: white;
-        }
-        .products{
-            --feat-wid: 15px;
-            width: 100%;
-            margin-bottom: 150px;
-        }
-        .products .products-zone{
-            max-width: 1200px;
-            margin: auto;
-        }
-        .products .products-zone .row{
-            display: flex;
-            flex-wrap: wrap;
-        }            
-        .products .products-zone h1{
-            margin: 50px;
-        }
-        .products .products-zone .product-card{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 30px 0;
-        }
-        .products .products-zone .product-card img{
-            width: 100%;
-            border-radius: 25px;
-        }
-        .product-card .product-inner{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px;
-        }
-        .product-card .product-inner .heading{
-            font-size: 24px;
-        } 
-        .product-card .product-inner .product-txt_dollars{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 150px;
-            margin: 10px;
-        }
-        .product-txt_dollars .txt{
-            font-size: 16px;
-            color: #4C4A28;
-        }
-        .product-txt_dollars .dollars{
-            color: red;
-            font-size: 24px;
-        }
-        .product-card .product-inner .btn-cart{            
-            width: 150px;
-            padding: 5px;
-            background: white;
-            color: #4C4A28;
-            border: 1px solid #4C4A28;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .product-card .product-inner .btn-cart:hover{
-            background: #156E5C;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <header>        
         <nav class="menu">
             <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
                 <img src="pictures/menu-logo.png" alt="logo">
@@ -181,82 +30,90 @@
                     <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
                     <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
-                <script>
-                        var searchIcon = document.getElementById('search-icon');
-                        var searchBar = document.getElementById('search-bar');
-                        searchIcon.addEventListener('click', function() {
-                            if (searchBar.style.display === 'none') {
-                            searchBar.style.display = 'block';
-                            } 
-                            else {
-                                searchBar.style.display = 'none';
-                            }
-                        })
-                    </script>
             </ul>
+        </nav>
+        <nav class="menu_small-screen">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <div id="hamburger" class="hamburger">
+                <img id="ham-menu" class="ham-menu" src="pictures/hamburger-menu.png" alt="menu">
+                <span id="ham-line_t" class="ham-line_t"></span>
+                <span id="ham-line_c" class="ham-line_c"></span>
+                <p id="menu-txt" class="menu-txt">menu</p>
+            </div>           
+            <ul id="menu-list" class="hide">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
+                <li><a href="FAQ_contactus.html#FAQ"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
+                <li><a href="FAQ_contactus.html#contactus"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <div class="followus">
+                    <p class="followus-heading">Follow us</p>
+                    <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+                </div>
+                <div class="login_register">
+                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
+                </div>                
+            </ul>
+            <div id="menu-list_bg" class="hide"></div>
         </nav>
     </header>
     <main>
         <section class="hot">
             <div class="hot-zone">                
-                <!-- hot script start-->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-                <script src="owl/owl.carousel.min.js"></script>
-                <!-- hot script end-->
                 <h1>熱銷推薦</h1>    
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <img src="pictures/hot-pic.jpg">
+                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
+                        <img src="pictures/products-pic/box-s.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">個人蔬菜盒</h3>
-                            <div class="hot-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <p class="dollars">NT $400元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="pictures/hot-pic.jpg">
+                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
+                        <img src="pictures/products-pic/box-m.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">家庭號蔬菜盒(3~4人)</h3>
-                            <div class="hot-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">800元</p>
-                            </div>
+                            <p class="dollars">NT $600元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="pictures/hot-pic.jpg">
+                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
+                        <img src="pictures/products-pic/box-m.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">家庭號蔬菜盒(4~6人)</h3>
-                            <div class="hot-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">800元</p>
-                            </div>
+                            <p class="dollars">NT $800元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>
                     <div class="item">
+                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/hot-pic.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">豪華蔬菜盒(6~10人)</h3>
-                            <div class="hot-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">1200元</p>
-                            </div>
+                            <p class="dollars">NT $1200元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="pictures/hot-pic.jpg">
+                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
+                        <img src="pictures/products-pic/juice-all.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">蔬果汁套餐</h3>
-                            <div class="hot-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">300元</p>
-                            </div>
+                            <p class="dollars">NT $350元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>
@@ -264,11 +121,15 @@
             </div>
             <img class="hot-bg-bottom" src="pictures/bg-bottom.png" alt="">            
         </section>
+        <!-- hot script start-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="owl/owl.carousel.min.js"></script>       
         <script>
             $('.owl-carousel').owlCarousel({
-                loop:true,
+                loop:false,
                 margin:10,
                 nav:true,
+                dots:false,
                 responsive:{
                     0:{
                         items:1
@@ -282,19 +143,47 @@
                 }
             })
         </script>
+        <!-- hot script end-->        
     <section class="products">
+        <h1>商品</h1>
         <div class="products-zone">
-            <h1>商品</h1>
+            
+            <dl class="products-list">
+                <dt>商品項目</dt>
+                <dd>ALL</dd>
+                <dd>蔬菜盒</dd>
+                <dd>蔬果汁</dd>
+                <dd>特惠組合區</dd>
+                <dd>惜食專區</dd>
+                <dd>其他</dd>
+            </dl>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/box-s.jpg">
                         <div class="product-inner">
                             <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <p class="dollars">NT $400元</p>
+                            <button class="btn-cart">加入購物車</button>
+                        </div>
+                    </div>                
+                </div>
+                <div class="col">
+                    <div class="product-card">
+                        <img src="pictures/products-pic/box-m.jpg">
+                        <div class="product-inner">
+                            <h3 class="heading">家庭號蔬菜盒(3~4人)</h3>
+                            <p class="dollars">NT $600元</p>
+                            <button class="btn-cart">加入購物車</button>
+                        </div>
+                    </div>                
+                </div>
+                <div class="col">
+                    <div class="product-card">
+                        <img src="pictures/products-pic/box-m.jpg">
+                        <div class="product-inner">
+                            <h3 class="heading">家庭號蔬菜盒(4~6人)</h3>
+                            <p class="dollars">NT $800元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
@@ -303,141 +192,58 @@
                     <div class="product-card">
                         <img src="pictures/hot-pic.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">豪華蔬菜盒(6~10人)</h3>
+                            <p class="dollars">NT $1200元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
                 </div>
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/juice-all.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">蔬果汁套餐</h3>
+                            <p class="dollars">NT $350元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
                 </div>
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/juice-carrot.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">紅蘿蔔汁禮盒</h3>
+                            <p class="dollars">NT $300元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
                 </div>
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/juice-strawberry.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">草莓汁禮盒</h3>
+                            <p class="dollars">NT $350元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
                 </div>
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/juice_veg.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">豪華蔬果汁套餐</h3>
+                            <p class="dollars">NT $600元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
                 </div>
                 <div class="col">
                     <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
+                        <img src="pictures/products-pic/juice-random.jpg">
                         <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
-                            <button class="btn-cart">加入購物車</button>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col">
-                    <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
-                        <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
-                            <button class="btn-cart">加入購物車</button>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col">
-                    <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
-                        <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
-                            <button class="btn-cart">加入購物車</button>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col">
-                    <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
-                        <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
-                            <button class="btn-cart">加入購物車</button>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col">
-                    <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
-                        <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
-                            <button class="btn-cart">加入購物車</button>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col">
-                    <div class="product-card">
-                        <img src="pictures/hot-pic.jpg">
-                        <div class="product-inner">
-                            <h3 class="heading">個人蔬菜盒</h3>
-                            <div class="product-txt_dollars">
-                                <p class="txt">7日份</p>
-                                <p class="dollars">400元</p>
-                            </div>
+                            <h3 class="heading">蔬果汁隨機驚喜禮盒</h3>
+                            <p class="dollars">NT 500元</p>
                             <button class="btn-cart">加入購物車</button>
                         </div>
                     </div>                
@@ -452,21 +258,31 @@
         <div class="footer">
             <div class="footer-logo">
                 <a class="footer-logo-link" href="index.html">
-                    <img src="pictures/logo.png" alt="logo" width="100px">
-                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-                </a>           
+                    <img src="pictures/logo.png" alt="logo" width="66.666666%">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="100%">    
+                </a>
+                <a class="footer-logo-link_phone" href="index.html"><img  src="pictures/menu-logo.png" alt="logo"></a>           
             </div>
             <div class="footer-content">
                 <ul class="footer-link">
-                    <li><a href="">每期菜單</a></li>
-                    <li><a href="">購物須知</a></li>
-                    <li><a href="">會員專區</a></li>
-                    <li><a href="">聯絡客服</a></li>
+                    <li><a href="index.html#recipe" >每期菜單</a></li>
+                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="login_register.html">會員專區</a></li>
+                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
                 </ul>
                 <div class="footer-companyInfo">
-                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
-                    <p>服務時間:周一至周五 09:00-18:00</p>
-                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd><a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a></dd>
+                    </dl>
+                    <dl>       
+                        <dt>服務時間</dt>
+                        <dd>周一至周五 <span>09:00-18:00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>地址</dt>
+                        <dd>蔬菜縣蔬菜鄉蔬菜路<span>888</span>號</dd>
+                    </dl>
                 </div>
                 <div class="footer-priv_copy">
                     <a class="privacy" href="">服務條款與隱私權政策</a>
@@ -474,24 +290,15 @@
                 </div>
             </div>
             <div class="footer-followus">
-                <h2>Follow us</h2>
-                <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+              <p class="footer-followus-heading">Follow us</p>
+              <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
             </div>
                 <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
                 >
-            <!-- top script -->
-            <script>
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            </script>
-            <!-- top script -->
         </div>
     </footer>
+    <script src="all.js"></script> 
 </body>
 </html>

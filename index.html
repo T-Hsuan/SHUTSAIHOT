@@ -1,338 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="icon" href="pictures/titleicon.png">
     <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="index.css">   
     <title>蔬菜喝 | SHU TSAI HOT</title>
-    <style>
-        main{
-            width: 100%;
-        }
-        .banner{
-            width: 100%;
-        }
-        .banner .owl-theme .item {
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-         .owl-theme .item img{
-            width: 100%;
-            max-width: 1440px;
-            border-radius: 25px;
-        }        
-        .owl-theme .item .item-slogan{
-            top: 55%;
-            position: absolute;
-            z-index: 2;  
-        }
-        .owl-theme .item .item-slogan p{
-            display: inline;
-            padding: 12px;
-            font-family: 'deco-font';
-            font-size: 48px;
-            letter-spacing: 5px;
-            background: white;
-            border-radius: 10px;
-        }
-        .about{
-            max-width: 1200px;
-            display: flex;    
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-            margin: auto;
-        }
-        .about-zone{
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            margin: 25px 35px 25px 25px;
-            background: #F2EED1;
-            border-radius: 10px;
-        }
-        .about-zone .about-deco{
-            position: absolute;
-            max-width: 150px;
-            top: -25px;
-        }        
-        .about-zone .about-content{
-            margin: 30px;
-            padding: 0 40px 70px;
-            line-height: 60px;
-            font-size: 20px;
-            border: 2px dashed #156E5C;
-            border-radius: 10px;
-        }
-        .about-content h1{
-            margin:35px 0 10px;
-            position: relative;   
-            text-align: left;
-            left: -25px;
-        }        
-        .about-content p{
-            padding: 5px 0;
-        }
-        .about-zone .more{
-            position: absolute;
-            bottom: 60px;
-            right: 60px;
-            width: 100px;
-            line-height: 45px;
-            font-family: 'deco-font';
-            font-size: 32px;
-            color: white;
-            background: #156E5C;
-            border: 0;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .about-zone .more span{
-            font-size: 24px;
-        }
-        .about-zone .more:hover{
-            background: #4C4A28;
-        }
-        .about .about-pic{
-            max-width: 450px;
-            margin: 25px 10px 0;
-        }
-        .introduce{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        .introduce h1{
-            margin: 120px 0 100px;
-        }
-        .introduce .intro-zone{
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template: repeat(10,1fr)/repeat(10,1fr);
-            place-items: center;
-            gap: 10px;
-            font-size: 20px;
-        }
-        .intro-zone h2{
-            margin: 25px 0;
-            position: relative;
-            font-family: 'deco-font';
-            font-size: 48px;
-            font-weight: 500;
-            letter-spacing: 10px;
-            color: #F99964;
-        }
-        .intro-zone .fresh-pic{
-            width: 100%;
-            max-width: 500px;
-            grid-area: 1/2/4/6;
-            border-radius: 25px;
-        }
-        .intro-zone .fresh-content{
-            grid-area: 1/6/3/9;
-            padding: 10px;
-        }
-        .intro-zone .yummy-pic{
-            height: 100%;
-            max-height: 550px;
-            grid-area: 3/6/8/10;
-            border-radius: 25px;
-        }
-        .intro-zone .yummy-content{
-            grid-area: 4/3/7/6;
-            padding: 10px;
-        }        
-        .intro-zone .variety-video{
-            width: 100%;
-            max-width: 450px;
-            grid-area: 7/2/11/6;
-            border-radius: 25px;
-        }
-        .intro-zone .variety-content{
-            grid-area: 8/6/10/10;
-            padding: 10px;
-        }
-        /* .introduce .intro-deco */
-        .intro-deco .intro-h1_em{
-            width: 350px;
-            position: absolute;
-            top: 75px;
-            left: 72px;
-            right: 0;
-            margin: auto;
-        }
-        .intro-deco .intro-love{
-            width: 180px;
-            position: absolute;
-            top: 150px;
-            right: 50px;
-            opacity: .7;
-            z-index: -1;            
-        }
-        .intro-deco .intro-var_y{
-            width: 530px;
-            position: absolute;
-            top: 300px;
-            left: -230px;
-            z-index: -1;
-        }
-        .intro-deco .intro-var_p{
-            width: 400px;
-            position: absolute;
-            bottom: 0px;
-            right: -100px;
-            z-index: -1;
-        }
-        .recipe{
-            width: 100%;
-            margin-top: 230px;
-            background: #156E5C;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-        .recipe .recipe-bg-top{
-            width: 100%;
-            position: absolute;
-            top: -130px;
-        }
-        .recipe h1{
-            color: #F2EED1;
-            z-index: 1;
-        }
-        .recipe .recipe-card-zone{    
-            width: 100%;        
-            display: flex;
-            margin: 30px;
-            justify-content: center;
-        }
-        .recipe-card-zone .recipe-card{
-            margin: 30px;
-            position: relative;
-        }
-        .recipe-card .card-deco{
-            position: relative;
-            z-index: 1;
-        }
-        .card-deco .card-bg-cup{
-            max-width: 300px;
-            height: 445px;
-            z-index: 1;
-        }
-        .card-deco .card-hover{
-            max-width: 300px;
-            height: 445px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            z-index: 1;
-        }
-        .recipe-card:hover .card-hover{
-            opacity: 1;
-        }
-        .card-deco .card-box{
-            width: 160px;
-            position: absolute;
-            right: 15px;
-            bottom: 20px;
-            opacity: 0;
-            z-index: 1;
-        }
-        .recipe-card:hover .card-box{
-            opacity: 1;
-        }
-        .recipe-card h2{
-            font-family: 'Caveat', cursive;
-            position: absolute;
-            left: 110px;
-            top: 95px;
-            z-index: 2;
-        }
-        .recipe-card .card-inner{
-            max-width: 240px;
-            position: absolute;
-            left: 36px;
-            top: 135px;
-            font-size: 18px;
-            z-index: 2;
-        }
-        .card-inner h3{
-            display: inline-block;
-            margin: 3px 0;
-            padding: 1px 8px;
-            font-size: 20px;
-            font-weight: 500;
-            color: #F2EED1;
-            background: #156E5C;
-            border-radius: 5px;
-        }
-        .recipe .note{
-            width: 380px;
-            color: white;
-            text-align: center;
-        }
-        .recipe .btn{
-            margin: 80px 0;
-        }
-        .recipe .more, .recipe .shop{
-            width: 100px;
-            line-height: 45px;
-            margin: 10px;          
-            font-family: 'deco-font';
-            font-size: 32px;
-            color: #4C4A28;
-            background: #FFEEE5;
-            border: 0;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .recipe .more span, .shop span{
-            font-size: 24px;
-        }
-        .recipe .more:hover, .shop:hover{
-            background: #F2EED1;
-        }
-        .recipe .recipe-w{
-            width: 130px;
-            position: absolute;
-            top: -50px;
-            left: 13%;
-        }
-        .recipe .recipe-p{
-            width: 200px;
-            position: absolute;
-            top: 9%;
-            right: 0;
-            z-index: 0;
-        }
-        .recipe .recipe-d{
-            width: 180px;
-            position: absolute;
-            bottom: 17%;
-            left: 20%;
-        }
-        .recipe .recipe-g{
-            width: 150px;
-            position: absolute;
-            bottom: 6%;
-            right: 19%;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <!-- <div class="welcome-pic">
+        <img src="pictures/open.png" alt="welcome-pic">
+    </div> -->
+    <header>        
         <nav class="menu">
             <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
                 <img src="pictures/menu-logo.png" alt="logo">
@@ -347,60 +32,59 @@
                     <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
                     <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
-                <script>
-                        var searchIcon = document.getElementById('search-icon');
-                        var searchBar = document.getElementById('search-bar');
-                        searchIcon.addEventListener('click', function() {
-                            if (searchBar.style.display === 'none') {
-                            searchBar.style.display = 'block';
-                            } 
-                            else {
-                                searchBar.style.display = 'none';
-                            }
-                        })
-                    </script>
             </ul>
+        </nav>
+        <nav class="menu_small-screen">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <div id="hamburger" class="hamburger">
+                <img id="ham-menu" class="ham-menu" src="pictures/hamburger-menu.png" alt="menu">
+                <span id="ham-line_t" class="ham-line_t"></span>
+                <span id="ham-line_c" class="ham-line_c"></span>
+                <p id="menu-txt" class="menu-txt">menu</p>
+            </div>           
+            <ul id="menu-list" class="hide">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
+                <li><a href="FAQ_contactus.html#FAQ"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
+                <li><a href="FAQ_contactus.html#contactus"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <div class="followus">
+                    <p class="followus-heading">Follow us</p>
+                    <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+                </div>
+                <div class="login_register">
+                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
+                </div>                
+            </ul>
+            <div id="menu-list_bg" class="hide"></div>
         </nav>
     </header>
     <main>
-        <div class="banner">
-            <!-- banner script start-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-            <script src="owl/owl.carousel.min.js"></script>
-            <!-- banner script end-->    
+        <div class="banner">   
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <div class="item-slogan"><p>「健康，從 蔬菜喝 開始！」</p></div>
+                    <p class="item-slogan">「健康，從 <span class="color-rose">蔬菜喝</span> 開始！」</p>
                     <img src="pictures/banner-pic1.png">
                 </div>
                 <div class="item">
-                    <div class="item-slogan">
-                        <p>「SHU TSAI HOT，打造你的蔬菜狂熱！」</p>
-                    </div>
-                    
+                    <p class="item-slogan">
+                        「<span class="color-brown">SHU TSAI HOT</span>，打造你的蔬菜狂熱！」
+                    </p>                   
                     <img src="pictures/banner-pic2.png">
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function(){
-                $(".owl-carousel").owlCarousel({
-                    loop:true,
-                    margin:0,
-                    nav:false,
-                    items:1,
-                    center:true,
-                    autoplay:true,
-                    dots:false,
-                    responsive:{
-                        0:{items:1},
-                        768:{items:1},
-                        1200:{items:1}
-                    }
-                });
-            });
-        </script>
-        <div class="about">
+        <section class="about">
             <img class="about-pic" src="pictures/about-pic.png" alt="about-img">
             <div class="about-zone">
                 <img class="about-deco" src="pictures/about-deco.png" alt="decorate">
@@ -409,10 +93,9 @@
                     <p>「蔬菜喝」提供有機、無農藥、非基因改造的蔬菜盒和蔬果汁，我們與當地小農和有機農場合作，生產最新鮮、最健康的產品，每期根據季節和供應情況調整產品組合。我們的蔬果汁不含任何添加劑、防腐劑或人工色素，是您每天所需營養的最佳來源。讓「蔬菜喝」幫助您享受更健康、更美味的生活！</p>
                 </div>
                 <button class="more" onclick="window.location.href='story.html'">more <span>▸</span></button>
-            </div>
-            
-        </div>
-        <div class="introduce">
+            </div>            
+        </section>
+        <section class="introduce">
             <h1>產品介紹</h1>
             <div class="intro-zone">
                 <div class="fresh-content">
@@ -426,7 +109,7 @@
                 </div>
                 <img class="yummy-pic" src="pictures/intro-juice.png" alt="yummy-pic">
                 <div class="variety-content">
-                    <h2>搭配多元，隨心所欲</h2>
+                    <h2>搭配多元，<br>隨心所欲</h2>
                     <p>蔬菜盒提供蔬菜類、根莖類、瓜果類、蕈菇類以及雞蛋組合再加上營養的蔬果汁搭配，每期提供您多樣化選擇。</p>
                 </div>
                 <video class="variety-video" src="pictures/product-video.mp4" autoplay controls></video>
@@ -437,8 +120,8 @@
                 <img class="intro-var_y" src="pictures/intro-deco_y.png" alt="decorate">
                 <img class="intro-var_p" src="pictures/intro-deco_p.png" alt="decorate">
             </div>
-        </div>
-        <div class="recipe">
+        </section>
+        <section id="recipe" class="recipe">
             <img class="recipe-bg-top" src="pictures/recipe-bg-top.png" alt="bg-decorate">
             <h1>今期菜單</h1>
             <div class="recipe-card-zone">
@@ -508,27 +191,37 @@
                 <img class="recipe-d" src="pictures/recipe-deco_d.png" alt="decorate">
                 <img class="recipe-g" src="pictures/recipe-deco_g.png" alt="decorate">
             </div>   
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer">
             <div class="footer-logo">
                 <a class="footer-logo-link" href="index.html">
-                    <img src="pictures/logo.png" alt="logo" width="100px">
-                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-                </a>           
+                    <img src="pictures/logo.png" alt="logo" width="66.666666%">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="100%">    
+                </a>
+                <a class="footer-logo-link_phone" href="index.html"><img  src="pictures/menu-logo.png" alt="logo"></a>           
             </div>
             <div class="footer-content">
                 <ul class="footer-link">
-                    <li><a href="">每期菜單</a></li>
-                    <li><a href="">購物須知</a></li>
-                    <li><a href="">會員專區</a></li>
-                    <li><a href="">聯絡客服</a></li>
+                    <li><a href="index.html#recipe" >每期菜單</a></li>
+                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="login_register.html">會員專區</a></li>
+                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
                 </ul>
                 <div class="footer-companyInfo">
-                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
-                    <p>服務時間:周一至周五 09:00-18:00</p>
-                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd><a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a></dd>
+                    </dl>
+                    <dl>       
+                        <dt>服務時間</dt>
+                        <dd>周一至周五 <span>09:00-18:00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>地址</dt>
+                        <dd>蔬菜縣蔬菜鄉蔬菜路<span>888</span>號</dd>
+                    </dl>
                 </div>
                 <div class="footer-priv_copy">
                     <a class="privacy" href="">服務條款與隱私權政策</a>
@@ -536,24 +229,19 @@
                 </div>
             </div>
             <div class="footer-followus">
-              <h2>Follow us</h2>
+              <p class="footer-followus-heading">Follow us</p>
               <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
               <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
               <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
             </div>
                 <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
                 >
-            <!-- top script -->
-            <script>
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            </script>
-            <!-- top script -->
         </div>
-  </footer>
+    </footer>
+    <!-- banner script start-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <!-- banner script end--> 
+    <script src="all.js"></script>    
 </body>
 </html>

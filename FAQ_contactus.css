@@ -1,0 +1,460 @@
+main{
+    background: #156E5C;
+}
+.FAQ{
+    width: 100%;
+}
+.FAQ .FAQ-container{
+    width: 1200px;
+    margin: 0 auto 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FAQ-container h1{
+    margin: 50px 0;
+    color: white;
+}
+.FAQ-container .question-btn{
+    margin: 30px;
+}
+.question-btn button{
+    width: 200px;
+    line-height: 50px;
+    margin: 5px 10px 25px 10px;
+    font-size: 24px;
+    color: #4A4E28;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.question-btn button:hover{
+    scale: 1.1;
+}
+.question-btn button.color{
+    color: white;
+    background: #F99964;
+}
+.FAQ-container .FAQ{
+    width: 550px;
+}
+.FAQ-container .FAQ:hover{
+    scale: 1.1;
+}
+.FAQ .FAQ-Q{
+    line-height: 60px;
+    margin: 20px 10px 0;
+    padding: 0 50px;
+    position: relative;
+    font-size: 20px;
+    background: #F2EED1;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+.FAQ .FAQ-Q.open{
+    border-radius: 15px 15px 0 0;
+}        
+.FAQ .FAQ-Q::after{
+    content: '+';
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    right: 50px;
+}
+.FAQ .FAQ-Q.open::after{
+    content: '-';
+    font-size: 40px;
+    font-weight: 400;
+    top: -5px;
+}        
+.FAQ .FAQ-A {
+    border-radius: 0 0 15px 15px;
+}
+.FAQ .FAQ-A{
+    display: none;
+    margin: 0 10px;
+    padding: 10px 50px;
+    font-size: 20px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+}
+.contactus{
+    width: 100%;
+}
+.contactus .contactus-container{
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+.contactus-container h1{
+    color: white;
+    margin-bottom: 50px;
+}
+.contactus-container p{
+    margin-bottom: 45px;
+}
+.contactus-container .contactus-content{
+    width: 670px;
+    display: flex;
+    flex-direction: column;
+}
+.contactus-content .contactus-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactus-input input{
+    width: 480px;
+    height: 50px;
+    margin: 25px 0;
+    padding: 0 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+}
+.contactus-input:nth-child(4) label{
+    align-self: start;
+    margin-top: 25px;
+}
+#question{
+    vertical-align: top;
+    width: 480px;
+    margin: 25px 0 25px 21px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.contactus-input:nth-child(5){
+    justify-content: center;
+}
+    #submit{
+        width: 200px;
+        height: 50px;
+        margin: 50px 0;
+        font-size: 20px;
+        color: black;
+        background: #F2EED1;
+        cursor: pointer;
+    }
+    #submit:hover{
+        color: white;
+        background: #F99964;
+    }
+@media screen and (max-width: 1200px){
+    .FAQ{
+        width: 100%;
+    }
+    .FAQ .FAQ-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 80px;
+    }
+    .FAQ-container h1{
+        margin: 45px 0;
+    }
+    .FAQ-container .question-btn{
+        margin: 30px;
+    }
+    .question-btn button{
+        width: 180px;
+        line-height: 45px;
+        margin: 5px 10px 20px 10px;
+        font-size: 20px;
+        border-radius: 15px;
+    }
+    .FAQ-container .FAQ{
+        width: 500px;
+    }   
+    .FAQ .FAQ-Q{
+        line-height: 55px;
+        margin: 20px 10px 0;
+        padding: 0 50px;
+        font-size: 18px;
+        border-radius: 15px;    
+    }
+    .FAQ .FAQ-Q.open{
+        border-radius: 15px 15px 0 0;
+    }        
+    .FAQ .FAQ-Q::after{
+        content: '+';
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        right: 50px;
+    }
+    .FAQ .FAQ-Q.open::after{
+        content: '-';
+        font-size: 36px;
+        font-weight: 400;
+        top: -5px;
+    }        
+    .FAQ .FAQ-A {
+        border-radius: 0 0 15px 15px;
+    }
+    .FAQ .FAQ-A{
+        display: none;
+        margin: 0 10px;
+        padding: 10px 50px;
+        font-size: 18px;
+        border-radius: 0 0 15px 15px;
+    }
+    .contactus{
+        width: 100%;
+    }
+    .contactus .contactus-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 90px;
+        font-size: 18px;
+    }
+    .contactus-container h1{
+        color: white;
+        margin-bottom: 50px;
+    }
+    .contactus-container p{
+        margin-bottom: 40px;
+    }
+    .contactus-container .contactus-content{
+        width: 640px;
+    }
+    .contactus-input input{
+        width: 480px;
+        height: 50px;
+        margin: 25px 0;
+        padding: 0 15px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+    .contactus-input:nth-child(4) label{
+        margin-top: 20px;
+    }
+    #question{
+        vertical-align: top;
+        width: 480px;
+        margin: 25px 0 25px 21px;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+        #submit{
+            width: 180px;
+            height: 45px;
+            margin: 45px 0;
+            font-size: 18px;
+        }
+}
+@media screen and (max-width: 1024px){
+    .FAQ{
+        width: 100%;
+    }
+    .FAQ .FAQ-container{
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto 70px;
+    }
+    .FAQ-container h1{
+        margin: 40px 0;
+    }
+    .FAQ-container .question-btn{
+        margin: 25px;
+    }
+    .question-btn button{
+        width: 160px;
+        line-height: 40px;
+        margin: 5px 8px 15px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+    .FAQ-container .FAQ{
+        width: 480px;
+    }
+    .FAQ .FAQ-Q{
+        line-height: 50px;
+        margin: 20px 10px 0;
+        padding: 0 50px;
+        font-size: 16px;
+        border-radius: 15px;    
+    }
+    .FAQ .FAQ-Q.open{
+        border-radius: 15px 15px 0 0;
+    }        
+    .FAQ .FAQ-Q::after{
+        content: '+';
+        font-size: 18px;
+        font-weight: 700;
+        right: 50px;
+    }
+    .FAQ .FAQ-Q.open::after{
+        content: '-';
+        font-size: 32px;
+        top: -5px;
+    }        
+    .FAQ .FAQ-A {
+        border-radius: 0 0 15px 15px;
+    }
+    .FAQ .FAQ-A{
+        display: none;
+        margin: 0 10px;
+        padding: 10px 50px;
+        font-size: 16px;
+        border-radius: 0 0 15px 15px;
+    }
+    .contactus{
+        width: 100%;
+    }
+    .contactus .contactus-container{
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        padding-bottom: 80px;
+        font-size: 16px;
+    }
+    .contactus-container h1{
+        color: white;
+        margin-bottom: 45px;
+    }
+    .contactus-container p{
+        margin-bottom: 35px;
+    }
+    .contactus-container .contactus-content{
+        width: 580px;
+    }
+    .contactus-input input{
+        width: 420px;
+        height: 45px;
+        margin: 25px 0;
+        padding: 0 15px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+    .contactus-input:nth-child(4) label{
+        margin-top: 20px;
+    }
+    #question{
+        vertical-align: top;
+        width: 420px;
+        margin: 25px 0 25px 21px;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+        #submit{
+            width: 180px;
+            height: 45px;
+            margin: 45px 0;
+            font-size: 16px;
+        }
+}
+@media screen and (max-width: 768px){
+    .FAQ{
+        width: 100%;
+    }
+    .FAQ .FAQ-container{
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto 60px;
+    }
+    .FAQ-container h1{
+        margin: 30px 0;
+    }
+    .FAQ-container .question-btn{
+        margin: 20px;
+        width: 310px;
+    }
+    .question-btn button{
+        width: 140px;
+        line-height: 35px;
+        margin: 5px 6px 15px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+    .FAQ-container .FAQ{
+        width: 300px;
+    }
+    .FAQ-container .FAQ:hover{
+        scale: 1;
+    }
+    .FAQ .FAQ-Q{
+        line-height: 40px;
+        margin: 15px 10px 0;
+        padding: 0 50px;
+        font-size: 14px;
+        border-radius: 10px;    
+    }    
+    .FAQ .FAQ-Q::after{
+        content: '+';
+        font-size: 16px;
+        font-weight: 700;
+        right: 25px;
+    }
+    .FAQ .FAQ-Q.open::after{
+        content: '-';
+        font-size: 28px;
+        top: -5px;
+    }
+    .FAQ .FAQ-A{
+        display: none;
+        margin: 0 10px;
+        padding: 10px 50px;
+        font-size: 14px;
+    }
+    .contactus{
+        width: 100%;
+    }
+    .contactus .contactus-container{
+        width: 100%;
+        max-width: 768px;
+        margin: auto;
+        padding-bottom: 70px;
+        font-size: 14px;
+    }
+    .contactus-container h1{
+        color: white;
+        margin-bottom: 45px;
+    }
+    .contactus-container p{
+        width: 80%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .contactus-container .contactus-content{
+        width: 70%;
+        max-width: 400px;
+    }
+    .contactus-input input{
+        width: 68%;
+        height: 40px;
+        margin: 25px 0;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    .contactus-input:nth-child(4) label{
+        margin-top: 20px;
+        width: 30px;
+    }
+    #question{
+        width: 68%;
+        margin: 25px 0;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    .contactus-input:nth-child(5){
+        justify-content: center;
+    }
+        #submit{
+            width: 120px;
+            height: 35px;
+            margin: 30px 0;
+            font-size: 14px;
+        }
+}

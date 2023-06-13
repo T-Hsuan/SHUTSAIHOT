@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="icon" href="pictures/titleicon.png">
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="FAQ_contactus.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>蔬菜喝 | SHU TSAI HOT</title>     
+</head>
+<body>
+    <header>        
+        <nav class="menu">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <ul class="menu-list">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="login_register.html"><p>登入 / 註冊</p><p class="english-menu">Log in / Register</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+            </ul>
+        </nav>
+        <nav class="menu_small-screen">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <div id="hamburger" class="hamburger">
+                <img id="ham-menu" class="ham-menu" src="pictures/hamburger-menu.png" alt="menu">
+                <span id="ham-line_t" class="ham-line_t"></span>
+                <span id="ham-line_c" class="ham-line_c"></span>
+                <p id="menu-txt" class="menu-txt">menu</p>
+            </div>           
+            <ul id="menu-list" class="hide">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
+                <li><a href="FAQ_contactus.html#FAQ"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
+                <li><a href="FAQ_contactus.html#contactus"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <div class="followus">
+                    <p class="followus-heading">Follow us</p>
+                    <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+                </div>
+                <div class="login_register">
+                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
+                </div>                
+            </ul>
+            <div id="menu-list_bg" class="hide"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="FAQ">
+            <div class="FAQ-container">
+                <h1>常見問題</h1>
+                <div class="question-btn">
+                    <button onclick="memberFAQ()">會員相關</button>
+                    <button onclick="shoppingFAQ()">購物相關</button>
+                    <button onclick="vegboxFAQ()">蔬菜盒相關</button>
+                    <button onclick="otherFAQ()">其他問題</button>
+                </div>
+                <div class="FAQ-zone">
+                    <div class="FAQ">
+                        <div class="FAQ-Q">忘記密碼怎麼辦?</div>
+                        <div class="FAQ-A">請至會員登入畫面，點選忘記密碼，系統會寄送重設網址至您的手機及信箱</div>
+                    </div>     
+                    <div class="FAQ">
+                        <div class="FAQ-Q">如何修改個人資料?</div>
+                        <div class="FAQ-A">請先登入會員，點選會員資料即可進行修改。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contactus" id="contactus">
+            <div class="contactus-container">
+                <h1>聯絡我們</h1>
+                <p>若是您還有其他疑問，歡迎在下方留言或是通過社群軟體聯繫我們</p>
+                <div class="contactus-content">
+                    <div class="contactus-input">
+                        <label for="name">姓名</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="contactus-input">
+                        <label for="phone">手機</label>
+                        <input type="tel" name="phone" id="phone" minlength="10" maxlength="10">
+                    </div>
+                    <div class="contactus-input">
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="contactus-input">
+                        <label for="question">輸入問題</label>
+                        <textarea name="question" id="question" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="contactus-input">
+                        <input type="submit" id="submit" value="送出">
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <a class="footer-logo-link" href="index.html">
+                    <img src="pictures/logo.png" alt="logo" width="66.666666%">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="100%">    
+                </a>
+                <a class="footer-logo-link_phone" href="index.html"><img  src="pictures/menu-logo.png" alt="logo"></a>           
+            </div>
+            <div class="footer-content">
+                <ul class="footer-link">
+                    <li><a href="index.html#recipe" >每期菜單</a></li>
+                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="login_register.html">會員專區</a></li>
+                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
+                </ul>
+                <div class="footer-companyInfo">
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd><a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a></dd>
+                    </dl>
+                    <dl>       
+                        <dt>服務時間</dt>
+                        <dd>周一至周五 <span>09:00-18:00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>地址</dt>
+                        <dd>蔬菜縣蔬菜鄉蔬菜路<span>888</span>號</dd>
+                    </dl>
+                </div>
+                <div class="footer-priv_copy">
+                    <a class="privacy" href="">服務條款與隱私權政策</a>
+                    <p class="copyright"> &copy; 2023 SHU TSAI HOT</p>
+                </div>
+            </div>
+            <div class="footer-followus">
+              <p class="footer-followus-heading">Follow us</p>
+              <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+            </div>
+                <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
+                >
+        </div>
+    </footer>
+    <script src="all.js"></script>    
+</body>
+</html>

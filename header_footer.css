@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Noto+Sans+TC:wght@100;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Noto+Sans+TC:wght@100;400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap');
 @font-face {
-    font-family: "deco-font";
+    font-family: 'deco-font';
     src: url(font/ChenYuluoyan-Thin-Monospaced.ttf);
   }
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans TC', sans-serif,'deco-font';
+    font-family: 'Zen Maru Gothic', sans-serif ,'Noto Sans TC', sans-serif,'deco-font';
 }
 
 h1{
@@ -40,7 +40,7 @@ header::after{
     z-index: 2;
 }
 header .menu{
-    max-width: 1200px;
+    width: 1200px;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,8 @@ header .menu{
 .menu .menu-logo{
     width: 200px;
     position: relative;
-    left: 2.5%;
+    left: 2%;
+    text-align: center;
 }
 .menu .menu-logo img{
     width: 80%;
@@ -72,7 +73,7 @@ header .menu-list{
     margin: 18px;
     text-align: center;
 }
-.menu-list li a:hover, .english-menu:hover{
+.menu-list li a:hover, .menu-list li .english-menu:hover{
     opacity: .8;
 }
 .menu-list li a{
@@ -94,8 +95,8 @@ header .menu-list{
 .search-box #search-bar{
     width: 150px;
     height: 50px;
-    position: relative;
-    right: -25px;
+    position: absolute;
+    right: 39%;
     top: 20%;
     font-size: 20px;
     color: gray;
@@ -106,18 +107,33 @@ header .menu-list{
     top: 0;
     bottom: 0;
     margin: auto 0px auto 150px;
-    max-width: 40px;
-    max-height: 40px;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
+.menu_small-screen{
+    display: none;
+}
+
 footer{
     width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
     background: #f2EED1;
+    position: relative;
+}
+footer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #f2EED1;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 .footer{
-    max-width: 1200px;
+    width: 1200px;
     display: grid;
     grid-template: repeat(2,1fr)/repeat(10,1fr);
     place-items: center;
@@ -126,7 +142,7 @@ footer{
     margin: auto;
     color: #4C4A28;
     background: #f2EED1;
-    z-index: 1;
+    z-index: 2;
 }
 .footer .footer-logo::before{
     content: "";
@@ -139,13 +155,13 @@ footer{
     border-radius: 50%;
     z-index: 1; 
 }
-.footer .footer-logo{
-    max-width: 150px;
+.footer .footer-logo{   
     grid-area: 1/2/3/3;
     position: relative;
     bottom: 20px;
 }
 .footer-logo-link{
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,10 +174,14 @@ footer{
     opacity: .9;
     z-index: 2;
 }
+.footer .footer-logo-link_phone{
+    display: none;
+}
 .footer .footer-content {
     grid-area: 1/3/3/7;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .footer-content .footer-link {
     display: flex;
@@ -181,31 +201,44 @@ footer{
     opacity: .8;
 }
 .footer-content .footer-companyInfo{
-    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
     line-height: 25px;
     font-size: 16px;
     color: #4C4A28;
 }
-.footer-companyInfo .tel {
+.footer-companyInfo dl{
+    display: flex;
+}
+.footer-companyInfo dt{
+    width: 100px;
+}
+.footer-companyInfo span{
     font-family: 'Caveat', cursive;
-    color: #4C4A28;
-    
+    font-size: 18px;
+}
+.footer-companyInfo .tel{
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #4C4A28;    
     text-decoration: none;
 }
 .footer-content .footer-priv_copy{
     margin: 5px 10px 0;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
-.footer-priv_copy .privacy {
+.footer-priv_copy .privacy{
     font-size: 12px;
     font-weight: 100;
     color: black;
     text-decoration: none;
 }
-.footer .copyright {
-    font-size: 10px;
+.footer .copyright{
+    font-family: 'deco-font';
+    font-size: 14px;
     font-weight: 100;
     color: black;
 }
@@ -214,7 +247,7 @@ footer{
     justify-self: start;
     text-align: center;        
 }
-.footer-followus h2{
+.footer-followus .footer-followus-heading{
     font-size: 32px;
     font-family: 'Caveat', cursive;
     letter-spacing: 7px;
@@ -235,3 +268,552 @@ footer{
     scale: 1.1;
     opacity: .9;
 }
+@media screen and (max-width: 1200px){
+    h1{
+    font-size: 32px;
+    color: #4C4A28;
+    text-align: center;
+    }
+    h2{
+        font-size: 28px;
+        color: #4C4A28;
+        text-align: center;
+    }
+    h3{
+        font-size: 20px;
+    }
+    header{
+        height: 90px;
+    }
+    header::after{
+        height: 90px;
+    }
+    header .menu{
+        width: 100%;
+        max-width: 1024px;
+        height: 90px;
+    }
+    .menu .menu-logo{
+        width: 150px;
+        left: 4%;
+    }
+    .menu .menu-logo img{
+        width: 95%;
+    }       
+    .menu-list li{
+        margin: 0 10px;
+    }
+    .menu-list li a{
+        font-size: 18px;
+    }
+    .menu-list li .english-menu{
+        font-size: 18px;
+    }
+    .menu-list .search-box{
+        width: 220px;
+        margin-left: 30px;
+    }
+    .search-box #search-bar{
+        width: 130px;
+        height: 40px;
+        top: 2px;
+        right: 38%;
+        font-size: 18px;
+    }
+    .search-box #search-icon{
+        right: 15%;
+        top: 0;
+        bottom: 0;
+        margin: auto 0px auto 5px;
+        width: 20px;
+        height: 20px;
+    }
+    /* w-1200 */
+    footer{
+        padding: 15px 0 25px;
+    }
+    .footer{
+        max-width: 1024px;
+        gap: 9px;
+    }
+    .footer .footer-logo::before{
+        width: 170px;
+        height: 150px;
+        bottom: -55px;
+        left: -43px;
+    }
+    .footer .footer-logo{   
+        width: 100px;
+    }
+    .footer-logo-link{
+        width: 100px;
+        position: absolute;
+        bottom: -90px;
+        left: -8px;
+    }
+    .footer-link li{
+        margin: 18px 8px 6px;
+    }
+    .footer-link li a {
+        font-size: 18px;
+    }
+    .footer-priv_copy .privacy {
+        font-size: 12px;
+        font-weight: 100;
+        color: black;
+        text-decoration: none;
+    }
+    .footer .copyright {
+        font-family: 'deco-font';
+        font-size: 12px;
+        font-weight: 100;
+        color: black;
+    }
+    .footer-content .footer-companyInfo{
+        margin: 0 10px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .footer-companyInfo dt{
+        width: 88px;
+    }
+    .footer-companyInfo span{
+        font-family: 'Caveat', cursive;
+        font-size: 16px;
+    }
+    .footer-content .footer-priv_copy{
+        margin: 5px 8px 0;
+    }
+    .footer-priv_copy .privacy {
+        font-size: 11px;
+        font-weight: 100;
+    }
+    .footer .copyright {
+        font-size: 13px;
+    }
+    .footer-followus .footer-followus-heading{
+        font-size: 28px;
+        letter-spacing: 6px;
+    }
+    .footer-followus a{
+        font-size: 55px;
+    }
+    .footer .pagetop{
+        width: 80px;
+    }
+}
+@media screen and (max-width: 1024px){
+    h1{
+        font-size: 28px;
+        color: #4C4A28;
+        text-align: center;
+    }
+    h2{
+        font-size: 24px;
+        color: #4C4A28;
+        text-align: center;
+    }
+    h3{
+        font-size: 18px;
+    }
+    header{
+        height: 80px;
+    }
+    header::after{
+        height: 80px;
+    }
+    header .menu{
+        max-width: 768px;
+        height: 80px;
+    }
+    .menu .menu-logo{
+        width: 145px;
+        left: 2%;
+        margin: 0 5px;
+    }
+    .menu .menu-logo img{
+        width: 90%;
+    }        
+    .menu-list li{
+        margin: 0 5px;
+    }
+    .menu-list li a{
+        font-size: 16px;
+    }
+    .menu-list li .english-menu{
+        font-size: 16px;
+    }
+    .menu-list .search-box{
+        width: 160px;
+        margin-left: 25px;
+    }
+    .search-box #search-bar{
+        width: 100px;
+        height: 30px;
+        right: 36%;
+        top: 5px;
+        font-size: 16px;
+    }
+    .search-box #search-icon{
+        right: 10%;
+        top: 0;
+        /* bottom: 0; */
+        margin: auto 0px auto 5px;
+        max-width: 20px;
+        max-height: 20px;
+    }
+    /* w-1024 */
+    .footer{
+        max-width: 768px;
+        gap: 8px;
+    }
+    .footer .footer-logo::before{
+        width: 130px;
+        height: 110px;
+        bottom: -20px;
+        left: -50px;
+    }
+    .footer .footer-logo{
+        width: 80px;       
+        bottom: 15px;
+    }
+    .footer-logo .footer-logo-link{
+        width: 90px;
+        position: absolute;
+        bottom: -65px;
+        left: -29px;
+    }
+    .footer-link li{
+        margin: 20px 4px 5px;
+    }
+    .footer-link li a {
+        font-size: 16px;
+    }
+    .footer-content .footer-companyInfo{
+        margin: 0 6px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+    .footer-companyInfo dt{
+        width: 74px;
+    }
+    .footer-companyInfo span{
+        font-family: 'Caveat', cursive;
+        font-size: 16px;
+    }
+    .footer-content .footer-priv_copy{
+        margin: 5px 4px;    
+    }
+    .footer-priv_copy .privacy {
+        font-size: 10px;
+    }
+    .footer .copyright {
+        font-size: 12px;
+    }
+    .footer-followus .footer-followus-heading{
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    .footer-followus a{
+        font-size: 40px;
+    }
+    .footer .pagetop{
+        width: 70px;
+    }
+}  
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 24px;
+        color: #4C4A28;
+        text-align: center;
+    }
+    h2{
+        font-size: 20px;
+        color: #4C4A28;
+        text-align: center;
+    }
+    h3{
+        font-size: 16px;
+    }
+    header{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        top: 0;
+        background: white;
+        z-index: 3;
+    }
+    header::after{
+        content: '';
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        background: white;
+        z-index: 2;
+    }
+    header .menu{
+        display: none;
+    }
+    header .menu_small-screen{
+        width: 100%;
+        max-width: 768px;
+        height: 80px;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: white;
+        z-index: 3;
+    }
+    .menu_small-screen .menu-logo{
+        width: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .menu_small-screen .menu-logo img{
+        width: 80%;
+    }        
+    .menu_small-screen .menu-logo:hover{
+        opacity: .9;
+    }
+    .hamburger{
+        --hamtop: 14.5px;
+        --hamright: 15px;
+        width: 56px;
+        height: 52px;
+        position: fixed;
+        top: 14px;
+        right: 10px;
+        z-index: 1;
+    }
+    .hamburger span{
+        width: 20px;
+        height: 2.5px;
+        background-color: white;
+        position: absolute;    
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .hamburger .ham-line_t{
+        top: 15px;
+        z-index: 2;
+    }
+    .hamburger .ham-line_c{
+        top: 23px;
+        z-index: 2;
+    }
+    .hamburger .ham-menu{
+        width: 56px;
+        height: 52px;        
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .hamburger .menu-txt{
+        position: absolute;
+        top: 21px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-family: 'deco-font';
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .hamburger:hover .ham-menu{
+        opacity: .8;
+    }
+    .menu_small-screen #menu-list{
+        width: 100%;
+        padding-top: 100px;        
+        position: fixed;
+        right: 0;
+        color: white;
+        background: #156E5C;
+        text-align: center;
+        list-style-type: none;
+        overflow-y: scroll;
+        opacity: 1;
+        transition: right .6s ,opacity .8s;    
+    }
+    .menu_small-screen #menu-list.hide{
+        position:fixed;
+        right: -100%;
+        opacity: 0;
+    }
+    #menu-list_bg{
+        content: '';
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #156E5C;
+        transition: right .6s;
+        z-index: -1;
+    }
+    #menu-list_bg.hide{
+        position: fixed;
+        right: -100%;
+    }
+    #menu-list li a ,#menu-list .login_register a{
+        display: inline-block;
+        padding-bottom: 10px;
+        font-family: 'deco-font';
+        font-size: 20px;
+        color: white; 
+        text-decoration: none;
+    }
+    #menu-list li a:hover ,#menu-list .login_register a:hover{
+        color: #F99964;
+    }
+    #menu-list li .english-menu ,#menu-list .login_register .english{
+        font-family: 'Caveat', cursive;
+        color: #f2EED1;
+    }
+    #menu-list .login_register{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #menu-list .login_register i{
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    #menu-list .login_register p{
+        display: inline-block;
+    }
+    #menu-list .followus{
+        margin: 50px 0 15px;
+    }
+    #menu-list .followus .followus-heading{       
+        font-size: 24px;
+        font-family: 'deco-font';
+        letter-spacing: 6px;
+    }
+    #menu-list .followus a{
+        display: inline-block;
+        line-height: 35px;
+        color: white;
+    }
+    #menu-list .followus i{
+        font-size: 35px;
+        color: white;
+    }
+    #menu-list .followus a:hover{
+        color: #F99964;
+    }
+    #menu-list .search-box{
+        width: 145px;
+        padding: 0 25px 0 5px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .search-box #search-bar{
+        width: 145px;
+        padding: 0 25px 0 5px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+    }
+    .search-box #search-icon{
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: 10px;
+        top: 32px;
+        cursor: pointer;
+    }
+    /* w-768 */
+    footer{
+        width: 100%;
+        background: #f2EED1;
+    }
+    .footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .footer .footer-logo::before{
+        display: none;
+    }
+    .footer .footer-logo{
+        width: 130px; 
+        position: relative;
+        top: 10px;
+        left: 0;
+        right: 0;       
+        margin: auto;
+    }
+    .footer-logo-link{
+        display: none;
+    }
+    .footer .footer-logo-link_phone{
+        display: block;
+    }
+    .footer-logo-link_phone img{
+        width: 100%;
+    }
+    .footer .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-content .footer-link{
+        display: none;
+    }
+    .footer-content .footer-companyInfo{
+        margin: 5px 10px;
+        font-size: 10px;
+        color: #4C4A28;
+    }
+    .footer-companyInfo dt{
+        width: 60px;
+    }
+    .footer-companyInfo span{
+        font-family: 'Caveat', cursive;
+        font-size: 12px;
+    }
+    .footer-companyInfo .tel{
+        font-size: 12px;
+    }
+    .footer-content .footer-priv_copy{
+        margin: 30px 10px 0;    
+    }
+    .footer-priv_copy .privacy {
+        font-size: 8px;
+        font-weight: 100;
+    }
+    .footer .copyright {
+        font-size: 10px;
+    }
+    .footer .footer-followus{
+        display: none;     
+    }
+    .footer .pagetop{
+        width: 50px;
+        position: absolute;
+        right: 3%;
+        bottom: 10px;
+        cursor: pointer;
+    }
+}
+  
+

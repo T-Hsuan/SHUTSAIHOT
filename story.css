@@ -1,0 +1,840 @@
+.about{
+    width: 100%;
+    background: #FFEEE5;
+}
+#about-zone_phone{
+    display: none;
+}
+.about-zone{
+    width: 1200px;
+    padding-top: 5%;
+    margin: 0 auto;
+    position: relative;
+}
+.about-zone .about-deco{
+    position: absolute;
+    right: 3%;
+    bottom: 18%;    
+}
+.about-zone .h1-en-about{
+    position: absolute;
+    right: 20%;
+    top: 17%;
+    font-family: 'deco-font';
+    font-size: 48px;
+    color: #156E5C;               
+}        
+.about-zone .h1-ch{
+    position: absolute;    
+    left: 5%;
+    top: 49%;
+    font-family: 'deco-font';
+    font-size: 48px;
+    color: #156E5C;
+}
+.about-zone .h1-en{
+    position: absolute;
+    right: 13%;
+    bottom: 22%;
+    font-family: 'deco-font';
+    font-size: 48px;
+    color: #156E5C;
+}
+.about-zone .about-logo{
+    width: 250px;
+    position: absolute;
+    left: 27%;
+    top: 43%;
+}
+.about-zone .about-card{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-content: space-around;
+}
+.about-card .about-card-top{
+    width: 570px;
+    position: relative;
+    left: 25px;
+}
+.about-card-top p{
+    width: 500px;
+    line-height: 60px;
+    padding: 10px;
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    font-size: 18px;
+}
+.about-card-top .card-bg-top{
+    width: 570px;
+}
+.about-card .about-card-center{
+    width: 580px;
+    align-self: flex-end;
+    position: relative;
+    right: 25px;
+    bottom: 110px;
+}
+.about-card-center p{
+    width: 500px;
+    line-height: 60px;
+    padding: 10px;
+    position: absolute;
+    left: 45px;
+    top: 18px;
+    font-size: 18px;
+}
+.about-card-center .card-bg-center{
+    width: 575px;
+}
+.about-card .about-card-bottom{
+    width: 575px;
+    position: relative;
+    left: 30px;
+    bottom: 150px;
+}
+.about-card-bottom p{
+    width: 510px;
+    line-height: 60px;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 18px;
+}
+.about-card-bottom .card-bg-bottom{
+    width: 580px;
+}
+.feature {
+    --feat-wid: 15px;
+    width: 100%;
+    padding: 120px 0 230px;
+    position: relative;
+    background: #FFEEE5;
+}
+.feature .feature-zone{
+    max-width: 1200px;
+    margin: auto;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feat-deco .feat-deco_h1{
+    position: absolute;
+    left: 85px;
+    right: 0;
+    top: 70px;
+    margin: auto;
+}
+.feat-deco .feat-deco_t{
+    width: 20%;
+    position: absolute;
+    left: 1%;
+    top: 30%;
+    z-index: 0;
+}
+.feat-deco .feat-deco_c{
+    width: 33%;
+    position: absolute;
+    right: 1%;
+    bottom: 30%;
+}
+.feat-deco .feat-deco_b{
+    width: 15%;
+    position: absolute;
+    left: 20%;
+    bottom: 8%;
+}
+.feature h1{
+    padding-bottom: 10px;
+}
+.feature .feature-zone .row-cols-1 .col .feat-content{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.feature .feature-zone .row-cols-1 .col:nth-child(2) .feat-content{
+    flex-direction: row-reverse;
+}
+.feature .feat-content img{
+    max-width: 550px;
+    width: 100%;
+    z-index: 1;
+}
+.feature .feat-content .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.feature .feat-content .inner h2{
+    color: #156E5C;
+}
+.feature .feat-content .inner p{
+    max-width: 400px;
+    line-height: 45px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.report{
+    width: 100%;
+    position: relative;
+    padding: 100px 0 150px;
+    background: #156E5C;
+    z-index: 1;
+}
+.report .report-bg-top{
+    width: 100%;
+    position: absolute;
+    top: -85px;
+    left: 0;
+    z-index: -1;
+}
+.report h1{
+    color: white;
+}
+.report .report-pic{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin: 30px auto 50px;
+    position: relative;
+    z-index: 2;
+}
+.report .report-pic .report-img_s{
+    max-width: 330px;
+    margin: 10px;
+    cursor: pointer;
+}
+#report-img_l-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+.report-pic_L .report-img_l-popup{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+    z-index: 9999;
+}
+#report-img_l {
+    max-width: 70%;
+    object-fit: contain;
+    z-index: 9999;
+}
+.report-pic_L .close{
+    width: 40px;
+    position: absolute;
+    top: -3.5%;
+    right: 7%;
+    font-size: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .9;
+}
+.report-pic_L .close:hover{
+    opacity: .8;
+}
+.report .more{
+    width: 100px;
+    line-height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'deco-font';
+    font-size: 32px;
+    color: #4C4A28;
+    background: #FFEEE5;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.report .more span{
+    font-size: 24px;
+}
+.report .more:hover{
+    background: #F2EED1;
+}
+.report .report-w{
+    width: 10%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+.report .report-p{
+    width: 15%;
+    position: absolute;
+    top: 9%;
+    right: 3%;
+    z-index: 0;
+}
+.report .report-d{
+    width: 13%;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+.report .report-g{
+    width: 10%;
+    position: absolute;
+    bottom: -7%;
+    right: 22%;
+    z-index: -1;
+}
+@media screen and (max-width: 1200px){
+    .about-zone{
+        width: 100%;
+        max-width: 1200px;
+        padding-top: 5%; 
+    }
+    .about-zone .about-deco{
+        right: 3%;
+        bottom: 18%;    
+    }
+    .about-zone .h1-en-about{
+        right: 20%;
+        top: 17%;
+        font-size: 42px;
+    }        
+    .about-zone .h1-ch{
+        right: 68%;
+        top: 46%;
+        font-size: 42px;
+    }
+    .about-zone .h1-en{
+        right: 15%;
+        bottom: 23%;
+        font-size: 42px;
+    }
+    .about-zone .about-logo{
+        width: 150px;
+        left: 36%;
+    }
+    .about-zone .about-card{
+        width: 100%;
+    }
+    .about-card .about-card-top{
+        width: 480px;
+        left: 1.5%;
+    }
+    .about-card-top p{
+        width: 420px;
+        line-height: 50px;
+        padding: 8px;
+        left: 22px;
+        top: 15px;
+        font-size: 16px;
+    }
+    .about-card-top .card-bg-top{
+        width: 480px;
+    }
+    .about-card .about-card-center{
+        width: 480px;
+        right: 1.5%;
+        bottom: 90px;
+    }
+    .about-card-center p{
+        width: 410px;
+        line-height: 50px;
+        padding: 8px;
+        left: 40px;
+        top: 15px;
+        font-size: 16px;
+    }
+    .about-card-center .card-bg-center{
+        width: 480px;
+    }
+    .about-card .about-card-bottom{
+        width: 510px;
+        left: 1%;
+        bottom: 150px;
+    }
+    .about-card-bottom p{
+        width: 450px;
+        line-height: 50px;
+        padding: 8px;
+        left: 22px;
+        top: 30px;
+        font-size: 16px;
+    }
+    .about-card-bottom .card-bg-bottom{
+        width: 510px;
+    }
+    .feature {
+        --feat-wid: 15px;
+        width: 100%;
+        padding: 100px 0 180px;
+    }
+    .feature .feature-zone{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .feat-deco .feat-deco_h1{
+        width: 360px;
+        left: 83px;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    .feat-deco .feat-deco_t{
+        width: 15%;
+        left: 1%;
+        top: 30%;
+    }
+    .feat-deco .feat-deco_c{
+        width: 30%;
+        right: 1%;
+        bottom: 32%;
+    }
+    .feat-deco .feat-deco_b{
+        width: 18%;
+        left: 20%;
+        bottom: 5%;
+    }
+    .feature .feature-zone .row-cols-1 .col .feat-content{
+        padding: 8px;
+    }
+    .feature .feat-content .inner p{
+        max-width: 350px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .report{
+        width: 100%;
+        position: relative;
+        padding: 90px 0 100px;
+    }
+    .report .report-bg-top{
+        width: 100%;
+        top: -50px;
+        left: 0;
+    }
+    .report .report-pic{
+        max-width: 100%;
+        padding: 30px;
+    }
+    .report .report-pic .report-img_s{
+        max-width: 270px;
+        margin: 10px;
+    }
+    #report-img_l {
+        max-width: 80%;
+    }
+    .report-pic_L .close{
+        width: 40px;
+        top: -3.5%;
+        right: 5%;
+        font-size: 28px;
+    }
+    .report .more{
+        width: 80px;
+        line-height: 40px;
+        font-size: 28px;
+        border-radius: 40px;
+    }
+    .report .more span{
+        font-size: 20px;
+    }
+    .report .report-w{
+        width: 10%;
+        top: 0;
+        left: 10%;
+    }
+    .report .report-p{
+        width: 15%;
+        top: 9%;
+        right: 5%;
+        z-index: 0;
+    }
+    .report .report-d{
+        width: 13%;
+        bottom: 17%;
+        left: 20%;
+    }
+    .report .report-g{
+        width: 11%;
+        bottom: -3%;
+        right: 25%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .about-zone{
+        width: 100%;
+        max-width: 1024px;
+        padding-top: 5%; 
+    }
+    .about-zone .about-deco{
+        right: 3%;
+        bottom: 18%;    
+    }
+    .about-zone .h1-en-about{
+        right: 16%;
+        top: 18%;
+        font-size: 40px;         
+    }        
+    .about-zone .h1-ch{
+        right: 65%;
+        top: 54%;
+        font-size: 40px;
+    }
+    .about-zone .h1-en{
+        right: 5%;
+        bottom: 12%;
+        font-size: 40px;
+    }
+    .about-zone .about-logo{
+        width: 100px;
+        left: 33%;
+        top: 52%;
+    }
+    .about-zone .about-card{
+        width: 100%;
+    }
+    .about-card .about-card-top{
+        width: 410px;
+        left: 1.5%;
+    }
+    .about-card-top p{
+        width: 365px;
+        line-height: 40px;
+        padding: 8px;
+        left: 15px;
+        top: 20px;
+        font-size: 14px;
+    }
+    .about-card-top .card-bg-top{
+        width: 410px;
+    }
+    .about-card .about-card-center{
+        width: 400px;
+        right: 1.5%;
+        bottom: 30%;
+    }
+    .about-card-center p{
+        width: 335px;
+        line-height: 40px;
+        padding: 8px;
+        left: 35px;
+        top: 15px;
+        font-size: 14px;
+    }
+    .about-card-center .card-bg-center{
+        width: 400px;
+    }
+    .about-card .about-card-bottom{
+        width: 400px;
+        left: 1%;
+        bottom: 0;
+    }
+    .about-card-bottom p{
+        width: 400px;
+        line-height: 40px;
+        padding: 8px;
+        left: 15px;
+        top: 35px;
+        font-size: 14px;
+    }
+    .about-card-bottom .card-bg-bottom{
+        width: 440px;
+    }
+    .feature {
+        --feat-wid:15px;
+        width: 100%;
+        padding: 100px 0 150px;
+    }
+    .feature .feature-zone{
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        padding: 80px 0;
+    }
+    .feat-deco .feat-deco_h1{
+        width: 320px;
+        left: 78px;
+        right: 0;
+        top: 60px;
+        margin: auto;
+    }
+    .feat-deco .feat-deco_t{
+        width: 15%;
+        left: 1%;
+        top: 30%;
+    }
+    .feat-deco .feat-deco_c{
+        width: 27%;
+        right: 1%;
+        bottom: 32%;
+    }
+    .feat-deco .feat-deco_b{
+        width: 10%;
+        left: 20%;
+        bottom: 5%;
+    }
+    .feature .feature-zone .row-cols-1 .col .feat-content{
+        padding: 5px;
+    }
+    .feature .feat-content img{
+        max-width: 350px;
+    }
+    .feature .feat-content .inner p{
+        max-width: 300px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .report{
+        width: 100%;
+        position: relative;
+        padding: 90px 0 100px;
+    }
+    .report .report-bg-top{
+        width: 100%;
+        top: -20px;
+        left: 0;
+    }
+    .report .report-pic{
+        max-width: 100%;
+        padding: 15px;
+    }
+    .report .report-pic .report-img_s{
+        max-width: 240px;
+        margin: 7px;
+    }
+    #report-img_l {
+        max-width: 80%;
+    }
+    .report-pic_L .close{
+        width: 40px;
+        top: -3.5%;
+        right: 5%;
+        font-size: 28px;
+    }
+    .report .more{
+        width: 70px;
+        line-height: 35px;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+    .report .more span{
+        font-size: 16px;
+    }
+    .report .report-w{
+        width: 9%;
+        top: 4%;
+        left: 10%;
+    }
+    .report .report-p{
+        width: 13%;
+        top: 9%;
+        right: 5%;
+        z-index: 0;
+    }
+    .report .report-d{
+        width: 8%;
+        bottom: 10%;
+        left: 20%;
+    }
+    .report .report-g{
+        width: 5%;
+        bottom: 2%;
+        right: 20%;
+    }
+}
+@media screen and (max-width: 768px){
+    .about-zone{
+        display: none;
+    }
+    #about-zone_phone{
+        display: block;
+        width: 100%;
+        max-width: 768px;
+        padding-top: 25%;
+    }
+    #about-zone_phone h1{
+        font-family: 'deco-font';
+        font-size: 36px;
+        color: #156E5C;
+    }
+    #about-zone_phone .about-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-zone_phone .about-card_p{
+        position: relative;
+        margin-bottom: 70px;
+    }
+    #about-zone_phone .about-card_p p{
+        width: 70%;
+        line-height: 25px;
+        margin: auto;
+        padding: 25px;
+        font-size: 14px;
+        background: white;
+        border-radius: 15px;
+    }
+    .about-logo{
+        width: 35px;
+        position: absolute;
+        top: -45px;
+        right: 12%;
+    }
+    .h1-ch{
+        position: absolute;
+        top: -57px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .h1-en-about{
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .h1-en{
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;        
+    }
+    .feature {
+        --feat-wid: 15px;
+        width: 100%;
+        padding: 80px 0 150px;
+    }
+    .feature .feature-zone{
+        width: 100%;
+        max-width: 768px;
+        margin: auto;
+        padding: 80px 0;
+    }
+    .feat-deco .feat-deco_h1{
+        width: 280px;
+        left: 55px;
+        right: 0;
+        top: 45px;
+        margin: auto;
+    }
+    .feat-deco .feat-deco_t{
+        width: 15%;
+        left: 1%;
+        top: 30%;
+    }
+    .feat-deco .feat-deco_c{
+        width: 30%;
+        right: 1%;
+        bottom: 32%;
+    }
+    .feat-deco .feat-deco_b{
+        width: 18%;
+        left: 20%;
+        bottom: 7%;
+    }
+    .feature .feature-zone .row-cols-1 .col .feat-content{
+        padding: 5px;
+    }
+    .feature .feat-content img{
+        max-width: 50%;
+        height: 100%;
+    }
+    .feature .feat-content .inner{
+        width: 50%;
+        align-items: center;
+    }
+    .feature .feat-content .inner h2{
+        font-size: 18px;
+    }
+    .feature .feat-content .inner p{
+        max-width: 100%;
+        font-size: 12px;
+    }
+    .report{
+        width: 100%;
+        position: relative;
+        padding: 90px 0 100px;
+    }
+    .report .report-bg-top{
+        width: 100%;
+        top: -30px;
+        left: 0;
+    }
+    .report .report-pic{
+        max-width: 100px;
+        padding: 30px;
+        flex-wrap: wrap;
+    }
+    .report .report-pic .report-img_s{
+        max-width: 250px;
+        margin: 10px;
+    }
+        #report-img_l {
+        max-width: 100%;
+    }
+    .report-pic_L .report-img_l-popup{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 5%);
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        z-index: 9999;
+    }
+    .report-pic_L .close{
+        width: 40px;
+        top: -3.5%;
+        right: 0;
+        font-size: 28px;
+    }
+    .report .more{
+        width: 80px;
+        line-height: 40px;
+        font-size: 28px;
+        border-radius: 40px;
+    }
+    .report .more span{
+        font-size: 20px;
+    }
+    .report .report-w{
+        width: 13%;
+        top: 1%;
+        left: 10%;
+    }
+    .report .report-p{
+        width: 15%;
+        top: 9%;
+        right: 5%;
+        z-index: 0;
+    }
+    .report .report-d{
+        width: 15%;
+        bottom: 7%;
+        left: 2%;
+    }
+    .report .report-g{
+        width: 8%;
+        bottom: 2%;
+        right: 2%;
+    }
+}
+

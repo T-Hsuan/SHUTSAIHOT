@@ -1,0 +1,432 @@
+.news{
+    width: 100%;
+    padding: 30px 0 150px;
+    margin-bottom: 120px;
+    background: #F2EED1;
+    position: relative;
+}
+.news h1{
+    padding: 50px;
+    position: relative;
+}
+.news .news-deco .h1-deco{
+    position: absolute;
+    top: 3%;
+    left: 80px;
+    right: 0;
+    margin: 0 auto;
+}
+/* .news .news-deco .news-deco_t{
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+.news .news-deco .news-deco_c{
+    position: absolute;
+    max-width: 200px;
+    top: 50%;
+    right: 0;
+}
+.news .news-deco .news-deco_b{
+    position: absolute;
+    max-width: 150px;
+    left: 25%;
+    bottom: 0;
+} */
+.news .news-card-list{            
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.news-card-list .news-card{
+    width: 550px;
+    height: 200px;
+    display: flex;
+    justify-content: start;
+    margin: 30px auto;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.news-card-list .news-card:hover{
+    opacity: .8;
+}
+.news-card .news-pic{
+    width: 45%;
+    border-radius: 25px 0 0 25px;
+    overflow: hidden;
+}
+.news-card img{
+    width: 100%;
+    height: 100%;            
+}          
+.news-card .news-inner{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.news-inner .heading{
+    font-size: 20px;
+} 
+.news-inner .news-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.news-txt .tag{
+    margin: 10px 0;
+    padding: 3px 8px;
+    font-size: 16px;
+    display: inline-block;
+    color: #F99964;
+    border: 3px solid #F99964;
+    border-radius: 25px;
+}
+.news-txt .note{
+    color: gray;
+    font-size: 12px;
+}
+.news .more{
+    width: 100px;
+    line-height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+    font-family: 'deco-font';
+    font-size: 32px;
+    color: white;
+    background: #156E5C;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.news .more span{
+    font-size: 24px;
+}
+.news .more:hover{
+    background: #4C4A28;
+}
+.expert{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 160px;
+    position: relative;
+}
+.expert h1{
+    margin-bottom: 50px;
+}
+.expert-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    height: 300px;
+    position: relative;
+}
+.expert-card .expert-card-pic_deco{
+    width: 38%;
+    left: 4%;
+    position: absolute;
+}
+.expert-card .expert-card-pic{
+    width: 40%;
+    margin: 25px;
+    z-index: 1;
+}
+.expert-card .expert-inner{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.expert-inner .expert-heading{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.expert-inner .expert-txt{
+    font-size: 20px;
+}
+.expert-inner .read-more{
+    position: relative;
+    align-self: self-end; 
+    width: 145px;
+    line-height: 45px;
+    margin: 10px;          
+    font-family: 'deco-font';
+    font-size: 32px;
+    color: #4C4A28;
+    cursor: pointer;
+}
+.expert-inner .read-more span{
+    position: absolute;
+    right: 5px;
+    bottom: 1px;
+    font-size: 30px;
+    color: #F99964;
+    animation: right 1.5s infinite;
+}
+@keyframes right{
+    0% { right: 0};
+    100% { right: 10px};
+}
+.expert-inner .read-more:hover{
+    color: #F99964;
+}
+.expert .more{
+    width: 100px;
+    line-height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -150px;
+    margin: 50px auto;
+    font-family: 'deco-font';
+    font-size: 32px;
+    color: white;
+    background: #156E5C;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.expert .more span{
+    font-size: 24px;
+}
+.expert .more:hover{
+    background: #4C4A28;
+}
+@media screen and (max-width: 1200px){
+    .news h1{
+        padding: 50px;
+        position: relative;
+    }
+    .news .news-deco .h1-deco{
+        width: 350px;
+        top: 40px;
+        left: 5.5%;
+        right: 0;
+        margin: auto;
+    }
+    .news .news-card-list{            
+        max-width: 1200px;
+    }
+    .news-card-list .news-card{
+        width: 530px;
+        height: 180px;
+        margin: 28px auto;
+        box-sizing: border-box;
+        border-radius: 25px;
+    }
+    .news-card .news-inner .heading{
+        font-size: 18px;
+    }         
+    .news-txt .tag{
+        margin: 10px 0;
+        padding: 3px 8px;
+        font-size: 15px;
+        border-radius: 25px;
+    }
+    .news .more{
+        width: 80px;
+        line-height: 40px;
+        margin: 45px auto;
+        font-size: 28px;
+        border-radius: 40px;
+    }
+    .news .more span{
+        font-size: 20px;
+    }
+    .expert-inner .expert-heading{
+        font-size: 20px;
+    }
+    .expert-inner .expert-txt{
+        font-size: 18px;
+    }
+    .expert-inner .read-more{
+        width: 140px;
+        line-height: 43px;
+        margin: 10px;          
+        font-size: 32px;
+    }
+    .expert-inner .read-more span{
+        right: 5px;
+        bottom: 1px;
+        font-size: 24px;
+    }
+    .expert .more{
+        width: 80px;
+        line-height: 40px;
+        left: 0;
+        right: 0;
+        bottom: -150px;
+        margin: 50px auto;
+        font-size: 28px;
+        border-radius: 40px;
+    }
+    .expert .more span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .news h1{
+        padding: 50px;
+        position: relative;
+    }
+    .news .news-deco .h1-deco{
+        width: 350px;
+        top: 40px;
+        left: 5.5%;
+        right: 0;
+        margin: auto;
+    }
+    .news .news-card-list{            
+        max-width: 1024px;
+    }
+    .news-card-list .news-card{
+        width: 480px;
+        height: 150px;
+        margin: 25px auto;
+        border-radius: 25px;
+    }
+    .news-card .news-inner .heading{
+        font-size: 16px;
+    }     
+    .news-txt .tag{
+        margin: 10px 0;
+        padding: 3px 8px;
+        font-size: 14px;
+        border-radius: 25px;
+    }
+    .news .more{
+        width: 70px;
+        line-height: 35px;
+        margin: 45px auto;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+    .news .more span{
+        font-size: 18px;
+    }
+    .expert-inner .expert-heading{
+        font-size: 18px;
+    }
+    .expert-inner .expert-txt{
+        font-size: 16px;
+    }
+    .expert-inner .read-more{
+        width: 120px;
+        line-height: 40px;
+        margin: 10px;          
+        font-size: 28px;
+    }
+    .expert-inner .read-more span{
+        right: 1px;
+        bottom: 1px;
+        font-size: 20px;
+    }
+    .expert .more{
+        width: 70px;
+        line-height: 35px;
+        left: 0;
+        right: 0;
+        bottom: -150px;
+        margin: 50px auto;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+    .expert .more span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .news h1{
+        padding: 50px;
+    }
+    .news .news-deco .h1-deco{
+        width: 320px;
+        top: 40px;
+        left: 8%;
+        right: 0;
+        margin: auto;
+    }
+    .news .news-card-list{            
+        max-width: 768px;
+    }
+    .news-card-list .news-card{
+        width: 80%;
+        max-width: 350px;
+        height: 150px;
+        margin: 25px auto;
+        border-radius: 25px;
+    }         
+    .news-txt .tag{
+        margin: 8px 0;
+        padding: 2px 5px;
+        font-size: 12px;
+        border: 2px solid #F99964;
+        border-radius: 15px;
+    }
+    .news-txt .note{
+        height: 12px;
+        font-size: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .news .more{
+        width: 70px;
+        line-height: 35px;
+        margin: 45px auto;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+    .news .more span{
+        font-size: 18px;
+    }
+    .expert{
+        margin: 0 10px 80px;
+    }
+    .expert-card {
+        margin: 20px 10px;
+    }
+    .expert-card .expert-card-pic{
+        margin: 15px;
+    }
+    .expert-card .expert-inner{
+        width: 60%;
+    }
+    .expert-inner .expert-heading{
+        font-size: 14px;
+    }
+    .expert-inner .expert-txt{
+        font-size: 12px;
+    }
+    .expert-inner .read-more{
+        width: 100px;
+        line-height: 35px;
+        margin: 10px;          
+        font-size: 24px;
+    }
+    .expert-inner .read-more span{
+        right: 1px;
+        bottom: 1px;
+        font-size: 16px;
+    }
+    .expert .more{
+        width: 50px;
+        line-height: 25px;
+        left: 0;
+        right: 0;
+        bottom: -80px;
+        margin: 50px auto;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+    .expert .more span{
+        font-size: 16px;
+    }
+}

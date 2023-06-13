@@ -1,0 +1,213 @@
+.today-eats{
+    --feat-wid: 20px;
+    width: 100%;
+    padding-bottom: 100px;
+    background: #FFEEE5;
+}
+.today-eats .today-eats-zone{
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 50px;
+    position: relative;
+}
+.today-eats-zone h1{
+    padding: 50px;
+}
+.today-eats-zone .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+.today-eats-zone .row a{
+    text-decoration: none;
+}
+.today-eats-card img:hover{
+    transform: rotate(5deg);
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
+}
+.today-eats-zone .row a:hover .today-eats-inner{
+    opacity: .8;
+}
+.today-eats-card img{
+    width: 100%;
+    border-radius: 25px;
+    transform: rotate(0deg);
+}
+.today-eats-card .today-eats-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 40px 0;
+}
+.today-eats-inner .heading{
+    font-size: 24px;
+    margin: 15px;
+    color: #156E5C;
+} 
+.today-eats-inner .txt{
+    padding: 5px 30px;
+    font-size: 20px;
+    color: #4C4A28;
+    border-top: 2px dashed #4C4A28;
+}
+.today-eats .today-eats-zone .more{
+    width: 100px;
+    line-height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 70px auto;
+    font-family: 'deco-font';
+    font-size: 32px;
+    color: white;
+    background: #156E5C;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.today-eats .today-eats-zone .more span{
+    font-size: 24px;
+}
+.today-eats .today-eats-zone .more:hover{
+    background: #4C4A28;
+}
+.howtodo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 150px;
+}
+.howtodo .howtodo-zone{
+    max-width: 1200px;
+    margin: auto;
+}
+.howtodo-zone h1{
+    margin: 100px;
+}
+.howtodo-zone .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.howtodo-zone .do-card{
+    margin: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.howtodo-zone .do-card h2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    margin: auto;
+    color: white;            
+    display: inline-block;
+    text-shadow: 0 0 25px black;
+    z-index: 1;
+}
+.howtodo-zone .do-card h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 3px;
+    margin: auto;
+    width: 0;
+    background-color: white;             
+}
+.howtodo-zone .do-card:hover h2::after{
+    width: 300px;
+    text-shadow: 5px 5px 10px gray;
+    animation: width .2s ease-out;
+}                
+@keyframes width{
+    0% { width: 0};
+    100% { width: 300px};
+}
+.howtodo-zone .do-card:hover img{
+    filter: blur(3px);
+    opacity: .7;
+}        
+.howtodo-zone .do-card img{
+    width: 100%;
+    border-radius: 15px;
+}
+@media screen and (max-width: 1200px){
+    .today-eats .today-eats-zone{
+        max-width: 1200px;
+    }
+    .today-eats-inner .heading{
+        font-size: 20px;
+    } 
+    .today-eats-inner .txt{
+        font-size: 18px;
+    }
+    .today-eats .today-eats-zone .more{
+        width: 80px;
+        line-height: 40px;
+        font-size: 28px;
+        border-radius: 40px;
+    }
+    .today-eats .today-eats-zone .more span{
+        font-size: 20px;
+    }
+    .howtodo .howtodo-zone{
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .today-eats .today-eats-zone{
+        max-width: 1024px;
+    }
+    .today-eats-inner .heading{
+        font-size: 18px;
+    } 
+    .today-eats-inner .txt{
+        font-size: 16px;
+    }
+    .today-eats .today-eats-zone .more{
+        width: 70px;
+        line-height: 35px;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+    .today-eats .today-eats-zone .more span{
+        font-size: 18px;
+    }
+    .howtodo .howtodo-zone{
+        max-width: 1024px;
+    }
+}
+@media screen and (max-width: 768px){
+    .today-eats .today-eats-zone{
+        max-width: 768px;
+    }
+    .today-eats-inner .heading{
+        font-size: 16px;
+        margin: 5px;
+    } 
+    .today-eats-inner .txt{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .today-eats .today-eats-zone .more{
+        width: 50px;
+        line-height: 25px;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+    .today-eats .today-eats-zone .more span{
+        font-size: 16px;
+    }
+    .howtodo{
+        padding-bottom: 100px;
+    }
+    .howtodo .howtodo-zone{
+        max-width: 768px;
+    }
+    .howtodo-zone h1{
+        margin: 50px;
+    }
+}

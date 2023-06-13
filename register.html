@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,78 +10,11 @@
     <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="register.css">
     <title>蔬菜喝 | SHU TSAI HOT</title>
-    <style>
-        .register{
-            width: 100%;
-            background: #156E5C;           
-        }
-        .register .register-box{
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .register-box h1{
-            margin: 50px;
-            color: white;
-        }
-        .register-box label{
-            color: white;
-            font-size: 20px;
-        }
-        .register-box label > input{
-            width: 350px;
-            height: 50px;
-            margin: 15px;
-            padding: 0 15px;
-            font-size: 20px;
-            border: none;
-            border-radius: 15px;
-        }
-        .register-box .agreement-check{
-            width: 450px;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-        .agreement-check label{
-            height: 30px;
-            font-size: 16px;
-            color: rgb(208, 208, 208);
-            margin-left: 40px;
-        }
-        .agreement-check #subscribe ,.agreement-check #privacy-confirm{
-            width: 16px;
-            height: 16px;
-        }
-        .register-box #submit{
-            width: 150px;
-            height: 50px;
-            margin: 50px;  
-            background: #F99964;
-            color: white;
-            font-size: 24px;
-            border: none;
-            border-radius: 15px; 
-            cursor: pointer;         
-        }
-        .register-box #submit:hover{
-            color: #4c4e28;
-            background: #FFEEE5;
-        }
-        .register-box .login{
-            margin: 30px;
-            color: white;
-        }
-        .register-box .login a{
-            color: #F99964;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <header>        
         <nav class="menu">
             <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
                 <img src="pictures/menu-logo.png" alt="logo">
@@ -96,19 +29,41 @@
                     <input type="text" id="search-bar" placeholder="搜尋產品" style="display: none;">
                     <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
-                <script>
-                        var searchIcon = document.getElementById('search-icon');
-                        var searchBar = document.getElementById('search-bar');
-                        searchIcon.addEventListener('click', function() {
-                            if (searchBar.style.display === 'none') {
-                            searchBar.style.display = 'block';
-                            } 
-                            else {
-                                searchBar.style.display = 'none';
-                            }
-                        })
-                    </script>
             </ul>
+        </nav>
+        <nav class="menu_small-screen">
+            <a class="menu-logo" href="index.html" title="蔬菜喝 SHU TSAI HOT">
+                <img src="pictures/menu-logo.png" alt="logo">
+            </a>
+            <div id="hamburger" class="hamburger">
+                <img id="ham-menu" class="ham-menu" src="pictures/hamburger-menu.png" alt="menu">
+                <span id="ham-line_t" class="ham-line_t"></span>
+                <span id="ham-line_c" class="ham-line_c"></span>
+                <p id="menu-txt" class="menu-txt">menu</p>
+            </div>           
+            <ul id="menu-list" class="hide">
+                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
+                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
+                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
+                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
+                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
+                <li><a href="FAQ_contactus.html#FAQ"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
+                <li><a href="FAQ_contactus.html#contactus"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
+                <div class="search-box">
+                    <input type="text" id="search-bar" placeholder="搜尋產品">
+                    <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
+                </div>
+                <div class="followus">
+                    <p class="followus-heading">Follow us</p>
+                    <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+                </div>
+                <div class="login_register">
+                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
+                </div>                
+            </ul>
+            <div id="menu-list_bg" class="hide"></div>
         </nav>
     </header>
     <main>
@@ -137,21 +92,31 @@
         <div class="footer">
             <div class="footer-logo">
                 <a class="footer-logo-link" href="index.html">
-                    <img src="pictures/logo.png" alt="logo" width="100px">
-                    <img src="pictures/logo-txt.png" alt="logotxt" width="150px">
-                </a>           
+                    <img src="pictures/logo.png" alt="logo" width="66.666666%">
+                    <img src="pictures/logo-txt.png" alt="logotxt" width="100%">    
+                </a>
+                <a class="footer-logo-link_phone" href="index.html"><img  src="pictures/menu-logo.png" alt="logo"></a>           
             </div>
             <div class="footer-content">
                 <ul class="footer-link">
-                    <li><a href="">每期菜單</a></li>
-                    <li><a href="">購物須知</a></li>
-                    <li><a href="">會員專區</a></li>
-                    <li><a href="">聯絡客服</a></li>
+                    <li><a href="index.html#recipe" >每期菜單</a></li>
+                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="login_register.html">會員專區</a></li>
+                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
                 </ul>
                 <div class="footer-companyInfo">
-                    <a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a>
-                    <p>服務時間:周一至周五 09:00-18:00</p>
-                    <p>蔬菜縣蔬菜鄉蔬菜路888號</p>
+                    <dl>
+                        <dt>TEL</dt>
+                        <dd><a class="tel" href="tel:0800000000" title="TEL">0800-000-000</a></dd>
+                    </dl>
+                    <dl>       
+                        <dt>服務時間</dt>
+                        <dd>周一至周五 <span>09:00-18:00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>地址</dt>
+                        <dd>蔬菜縣蔬菜鄉蔬菜路<span>888</span>號</dd>
+                    </dl>
                 </div>
                 <div class="footer-priv_copy">
                     <a class="privacy" href="">服務條款與隱私權政策</a>
@@ -159,24 +124,15 @@
                 </div>
             </div>
             <div class="footer-followus">
-                <h2>Follow us</h2>
-                <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
+              <p class="footer-followus-heading">Follow us</p>
+              <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
             </div>
                 <img class="pagetop" src="pictures/TOP.png" alt="top" width="100px" onclick="scrollToTop()"
                 >
-            <!-- top script -->
-            <script>
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            </script>
-            <!-- top script -->
         </div>
     </footer>
+    <script src="all.js"></script>  
 </body>
 </html>
