@@ -338,6 +338,9 @@ main{
         width: 120px;
         font-size: 16px;
     }
+    .hot .hot-bg-bottom{
+        bottom: -60px;
+    }
     .products-zone .products-list{
         width: 15%;
         margin-left: 20px;
