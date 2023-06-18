@@ -51,7 +51,7 @@
     cursor: pointer;
 }
 .news-card-list .news-card:hover{
-    opacity: .8;
+    scale: 1.1;
 }
 .news-card .news-pic{
     width: 45%;
@@ -177,6 +177,7 @@
 }
 .expert-inner .read-more:hover{
     color: #F99964;
+    scale: 1.1;
 }
 .expert .more{
     width: 100px;
