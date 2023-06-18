@@ -635,6 +635,7 @@ footer::after{
     }
     .menu_small-screen #menu-list{
         width: 100%;
+        height: 100vh;
         padding-top: 100px;        
         position: fixed;
         right: 0;
@@ -666,55 +667,6 @@ footer::after{
         position: fixed;
         right: -100%;
     }
-    #menu-list li a ,#menu-list .login_register a{
-        display: inline-block;
-        padding-bottom: 10px;
-        font-family: 'deco-font';
-        font-size: 20px;
-        color: white; 
-        text-decoration: none;
-    }
-    #menu-list li a:hover ,#menu-list .login_register a:hover{
-        color: #F99964;
-    }
-    #menu-list li .english-menu ,#menu-list .login_register .english{
-        font-family: 'Caveat', cursive;
-        color: #f2EED1;
-    }
-    #menu-list .login_register{
-        position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    #menu-list .login_register i{
-        font-size: 20px;
-        vertical-align: middle;
-    }
-    #menu-list .login_register p{
-        display: inline-block;
-    }
-    #menu-list .followus{
-        margin: 50px 0 15px;
-    }
-    #menu-list .followus .followus-heading{       
-        font-size: 24px;
-        font-family: 'deco-font';
-        letter-spacing: 6px;
-    }
-    #menu-list .followus a{
-        display: inline-block;
-        line-height: 35px;
-        color: white;
-    }
-    #menu-list .followus i{
-        font-size: 35px;
-        color: white;
-    }
-    #menu-list .followus a:hover{
-        color: #F99964;
-    }
     #menu-list .search-box{
         width: 145px;
         padding: 0 25px 0 5px;
@@ -739,6 +691,63 @@ footer::after{
         right: 10px;
         top: 32px;
         cursor: pointer;
+    }
+    #menu-list a{
+        color: white; 
+        text-decoration: none;
+    }
+    #menu-list a li{
+        padding-bottom: 10px;
+        font-family: 'deco-font';
+        font-size: 20px; 
+    }
+    #menu-list .login_register a{
+        padding-bottom: 15px;
+        font-family: 'deco-font';
+        font-size: 20px;
+        color: white;  
+        text-decoration: none;
+    }
+    #menu-list .followus{
+        margin: 50px 0 15px;
+    }
+    #menu-list .followus .followus-heading{       
+        font-size: 24px;
+        font-family: 'deco-font';
+        letter-spacing: 6px;
+    }
+    #menu-list .followus a{
+        display: inline-block;
+        line-height: 35px;
+        color: white;
+    }
+    #menu-list .followus i{
+        font-size: 35px;
+        color: white;
+    }
+    #menu-list .login_register{
+        display: block;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #menu-list .login_register i{
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    #menu-list .login_register p{
+        display: inline-block;
+    }
+    #menu-list a:hover 
+    ,#menu-list .login_register:hover
+    ,#menu-list .followus a:hover{
+        color: #F99964;
+    }
+    #menu-list a li .english-menu ,#menu-list .login_register .english{
+        font-family: 'Caveat', cursive;
+        color: #f2EED1;
     }
     /* w-768 */
     footer{

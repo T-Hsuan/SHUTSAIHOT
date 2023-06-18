@@ -44,6 +44,26 @@ Menu.addEventListener('click',
         }
     }
 );
+const MenuListClick = document.querySelectorAll('#menu-list a');
+MenuListClick.forEach(function (e){
+    e.addEventListener('click', function (){
+        const menuTxt= document.getElementById('menu-txt'); 
+        const hamMenu = document.getElementById('ham-menu');
+        const hamLineT = document.getElementById('ham-line_t');
+        const hamLineC = document.getElementById('ham-line_c');
+        const menuListBG = document.getElementById('menu-list_bg');
+        const menuList = document.getElementById('menu-list');
+        hamMenu.src = 'pictures/hamburger-menu.png' ;
+        menuTxt.innerText = 'menu' ;
+        hamLineT.style.top = '15px';
+        hamLineC.style.top = '23px';
+        hamLineT.style.transform = 'rotate(0deg)';
+        hamLineC.style.transform = 'rotate(0deg)';
+        menuListBG.classList.add("hide");
+        menuList.classList.add("hide");
+    });
+});
+
 //phone hamburger end
 //pagetop script start
 function scrollToTop() {

@@ -43,26 +43,38 @@
                 <p id="menu-txt" class="menu-txt">menu</p>
             </div>           
             <ul id="menu-list" class="hide">
-                <li><a href="story.html"><p>品牌故事</p><p class="english-menu">Story</p></a></li>
-                <li><a href="products.html"><p>產品介紹</p><p class="english-menu">Products</p></a></li>
-                <li><a href="classroom.html"><p>料理小教室</p><p class="english-menu">Classroom</p></a></li>
-                <li><a href="news.html"><p>最新消息</p><p class="english-menu">News</p></a></li>
-                <li><a href="index.html#recipe"><p>每期菜單</p><p class="english-menu">Recipe</p></a></li>
-                <li><a href="FAQ_contactus.html"><p>常見問題</p><p class="english-menu">FAQ</p></a></li>
-                <li><a href="FAQ_contactus.html"><p>聯絡我們</p><p class="english-menu">Contact</p></a></li>
                 <div class="search-box">
                     <input type="text" id="search-bar" placeholder="搜尋產品">
                     <img id="search-icon" src="pictures/icon-search.png" alt="search" title="搜尋">                    
                 </div>
+                <a href="story.html">
+                    <li><p>品牌故事</p><p class="english-menu">Story</p></li>
+                </a>
+                <a href="products.html">
+                    <li><p>產品介紹</p><p class="english-menu">Products</p></li>
+                </a>
+                <a href="classroom.html">
+                    <li><p>料理小教室</p><p class="english-menu">Classroom</p></li>
+                </a>
+                <a href="news.html">
+                    <li><p>最新消息</p><p class="english-menu">News</p></li>
+                </a>
+                <a href="index.html#recipe">
+                    <li><p>每期菜單</p><p class="english-menu">Recipe</p></li>
+                </a>
+                <a href="FAQ_contactus.html#FAQ">
+                    <li><p>常見問題</p><p class="english-menu">FAQ</p></li>
+                </a>
+                <a href="FAQ_contactus.html#contactus">
+                    <li><p>聯絡我們</p><p class="english-menu">Contact</p></li>
+                </a>
                 <div class="followus">
                     <p class="followus-heading">Follow us</p>
                     <a href="https://line.me/zh-hant/" target="_blank"><i class="lab la-line"></i></a>
                     <a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-square"></i></a>
                     <a href="https://www.instagram.com/" target="_blank"><i class="lab la-instagram"></i></a>
                 </div>
-                <div class="login_register">
-                    <a href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>
-                </div>                
+                <a class="login_register" href="login_register.html"><i class="las la-user-circle"></i><p>&nbsp;登入 / 註冊&nbsp;</p><p class="english">Log in / Register</p></a>               
             </ul>
             <div id="menu-list_bg" class="hide"></div>
         </nav>
@@ -73,7 +85,6 @@
                 <h1>熱銷推薦</h1>    
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/products-pic/box-s.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">個人蔬菜盒</h3>
@@ -82,7 +93,6 @@
                         </div>
                     </div>
                     <div class="item">
-                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/products-pic/box-m.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">家庭號蔬菜盒(3~4人)</h3>
@@ -91,7 +101,6 @@
                         </div>
                     </div>
                     <div class="item">
-                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/products-pic/box-m.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">家庭號蔬菜盒(4~6人)</h3>
@@ -100,7 +109,6 @@
                         </div>
                     </div>
                     <div class="item">
-                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/hot-pic.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">豪華蔬菜盒(6~10人)</h3>
@@ -109,7 +117,6 @@
                         </div>
                     </div>
                     <div class="item">
-                        <!-- <i class="fa-solid fa-heart" style="color: #f99964;"></i> -->
                         <img src="pictures/products-pic/juice-all.jpg">
                         <div class="hot-inner">
                             <h3 class="hot-heading">蔬果汁套餐</h3>
@@ -147,16 +154,17 @@
     <section class="products">
         <h1>商品</h1>
         <div class="products-zone">
-            
-            <dl class="products-list">
-                <dt>商品項目</dt>
-                <dd>ALL</dd>
-                <dd>蔬菜盒</dd>
-                <dd>蔬果汁</dd>
-                <dd>特惠組合區</dd>
-                <dd>惜食專區</dd>
-                <dd>其他</dd>
-            </dl>
+            <div class="products-list">
+                <dl>
+                    <dt>商品項目</dt>
+                    <dd>ALL</dd>
+                    <dd>蔬菜盒</dd>
+                    <dd>蔬果汁</dd>
+                    <dd>特惠組合區</dd>
+                    <dd>惜食專區</dd>
+                    <dd>其他</dd>
+                </dl>
+            </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                 <div class="col">
                     <div class="product-card">
@@ -266,9 +274,9 @@
             <div class="footer-content">
                 <ul class="footer-link">
                     <li><a href="index.html#recipe" >每期菜單</a></li>
-                    <li><a href="FAQ_contactus.html">常見問題</a></li>
+                    <li><a href="FAQ_contactus.html#FAQ">常見問題</a></li>
                     <li><a href="login_register.html">會員專區</a></li>
-                    <li><a href="FAQ_contactus.html">聯絡我們</a></li>
+                    <li><a href="FAQ_contactus.html#contactus">聯絡我們</a></li>
                 </ul>
                 <div class="footer-companyInfo">
                     <dl>
