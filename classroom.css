@@ -50,6 +50,7 @@
     font-size: 20px;
     color: #4C4A28;
     border-top: 2px dashed #4C4A28;
+    text-align: end;
 }
 .today-eats .today-eats-zone .more{
     width: 100px;
@@ -209,5 +210,15 @@
     }
     .howtodo-zone h1{
         margin: 50px;
+    }
+    .howtodo-zone .do-card h2::after{
+        height: 2px;            
+    }
+    .howtodo-zone .do-card:hover h2::after{
+        width: 80%;
+    }                
+    @keyframes width{
+        0% { width: 0};
+        100% { width: 80%};
     }
 }
