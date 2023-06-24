@@ -365,15 +365,28 @@ main{
     .hot .hot-bg-bottom{
         bottom: -60px;
     }
+    .products .products-zone{
+        max-width: 768px;
+        margin: 50px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .products-zone .products-list{
-        width: 18%;
+        width: 80%;
         margin: 0 10px;
     }
     .products-list dl{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         top: 81px;
         padding: 30px 5px;
         font-size: 16px;
         border-radius: 15px;
+    }
+    .products-list dt{
+        display: none;
     }
     .products-list dd{
         margin: 10px 5px;
